@@ -1,0 +1,753 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>همزی | همراه هوشمند مسیر یادگیری تو</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800&family=Noto+Naskh+Arabic:wght@400;700&family=Lalezar&family=Noto+Sans+Arabic:wght@400;700&display=swap">
+<style>
+:root{--a:#8b5cf6;--b:#ec4899;--font:'Vazirmatn',sans-serif;--bg:#0f0b1e;--c:rgba(255,255,255,.07);--t:#f1f0fa;--m:#a5a3bd;--bd:rgba(255,255,255,.13);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[data-mode=light]{--bg:#f3f2fb;--c:rgba(255,255,255,.85);--t:#1c1b2e;--m:#6b6a85;--bd:rgba(0,0,0,.09)}
+[data-theme=ocean]{--a:#0ea5e9;--b:#6366f1}[data-theme=emerald]{--a:#10b981;--b:#06b6d4}[data-theme=sunset]{--a:#f97316;--b:#ef4444}[data-theme=rose]{--a:#f43f5e;--b:#d946ef}[data-theme=minimal]{--a:#334155;--b:#64748b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}body{font-family:var(--font);background:var(--bg);color:var(--t);min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 85% 0,color-mix(in srgb,var(--a) 32%,transparent),transparent 55%),radial-gradient(circle at 5% 90%,color-mix(in srgb,var(--b) 26%,transparent),transparent 50%)}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer}
+input,select{background:var(--c);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;width:100%;margin:4px 0 10px}option{background:var(--bg)}
+label{font-size:.85rem;color:var(--m)}h1,h2,h3{font-weight:800}
+.card{background:var(--c);border:1px solid var(--bd);border-radius:22px;padding:16px;backdrop-filter:blur(14px);margin-bottom:12px}
+.btn{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border:0;border-radius:14px;padding:12px 20px;font-weight:700;transition:transform .15s}.btn:active,.btn2:active{transform:scale(.95)}
+.btn2{background:var(--c);border:1px solid var(--bd);border-radius:14px;padding:11px 18px;transition:transform .15s}.btn2.ok{background:#10b98133;border-color:#10b981}.btn2.no{background:#ef444433;border-color:#ef4444;animation:sh .35s}
+.ib{background:none;border:0;padding:6px;border-radius:10px;display:grid;place-items:center}
+.m{color:var(--m)}.c{text-align:center}.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.row>*{flex:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.q{text-align:start;display:flex;flex-direction:column;gap:8px;color:var(--t);transition:transform .2s}.q:hover{transform:translateY(-3px)}.q svg{color:var(--a)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;backdrop-filter:blur(16px);background:color-mix(in srgb,var(--bg) 70%,transparent)}
+.logo,.lg{font-family:'Lalezar',var(--font);background:linear-gradient(135deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.7rem}.lg{font-size:4rem}
+.av{width:40px;height:40px;border-radius:50%;object-fit:cover}
+main{max-width:720px;margin:auto;padding:14px 16px 120px}.in>*{animation:up .45s both}.in>*:nth-child(2){animation-delay:.07s}.in>*:nth-child(3){animation-delay:.14s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}@keyframes sh{25%{transform:translateX(6px)}75%{transform:translateX(-6px)}}@keyframes fl{50%{transform:translateY(-26px) rotate(18deg)}}@keyframes pop{from{transform:scale(.7);opacity:0}}
+nav{position:fixed;bottom:0;inset-inline:0;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(18px);border-top:1px solid var(--bd);padding:6px 8px calc(4px + env(safe-area-inset-bottom,0px));z-index:5}
+nav .it{display:flex;max-width:720px;margin:auto}nav button{flex:1;background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.72rem;color:var(--m);padding:4px}nav button.on{color:var(--a);font-weight:700}
+nav small{display:block;text-align:center;font-size:.62rem;color:var(--m);opacity:.7;padding-top:2px}
+.rg{position:relative;width:120px;flex:none}.rg svg{transform:rotate(-90deg);width:100%}.rg circle{fill:none;stroke-width:9}.rt{stroke:var(--bd)}.rp{stroke:url(#gr);stroke-linecap:round;transition:stroke-dashoffset .3s}.rl{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:1.1rem}
+.big .rg{width:min(70vw,260px);margin:10px auto}.big .rl{font-size:2.2rem}
+.hero{display:flex;gap:14px;align-items:center;justify-content:space-between}.hero .av{width:56px;height:56px}
+.avs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.avb{background:none;border:2px solid transparent;border-radius:50%;padding:2px;transition:transform .2s}.avb img{width:100%;border-radius:50%;display:block}.avb.on{border-color:var(--a);transform:scale(1.08)}
+.reg{padding-top:30px}
+.tk{display:flex;gap:10px;align-items:center;padding:12px}.tk.dn b{text-decoration:line-through;opacity:.55}.g1{flex:1;display:flex;flex-direction:column;gap:3px}
+.ck{width:26px;height:26px;border-radius:50%;border:2px solid var(--a);background:none;color:var(--a);display:grid;place-items:center;transition:.2s}.dn .ck{background:var(--a);color:#fff;animation:pop .3s}
+.bd{color:#ef4444;font-size:.75rem}.pr{font-size:.72rem;color:var(--m)}.p3{color:#f97316}
+.tabs{display:flex;gap:8px;margin-bottom:10px}.tabs button{flex:1;padding:8px;border-radius:12px;border:1px solid var(--bd);background:var(--c)}.tabs .on{background:var(--a);color:#fff;border-color:var(--a)}
+.bars{display:flex;gap:8px;align-items:flex-end;height:130px}.bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:.7rem;gap:4px}.bars i{display:block;width:100%;border-radius:8px 8px 3px 3px;background:linear-gradient(var(--a),var(--b));min-height:3px;transition:height .6s}
+.hm{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.hm i{aspect-ratio:1;border-radius:6px;background:var(--a)}
+.st{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.st b{font-size:1.4rem;display:block}
+canvas{width:min(100%,320px);aspect-ratio:1;border-radius:16px;border:1px solid var(--bd);touch-action:none;margin:8px auto;display:block}
+.dp{display:grid;grid-template-columns:repeat(3,56px);gap:6px;justify-content:center;direction:ltr}.dp button{height:48px;border-radius:12px;border:1px solid var(--bd);background:var(--c)}.dp button:nth-child(1){grid-column:2}.dp button:nth-child(2){grid-column:1}
+.tt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:280px;margin:10px auto}.tt button{aspect-ratio:1;font-size:2rem;font-weight:800;border-radius:16px;border:1px solid var(--bd);background:var(--c)}.tt .X{color:var(--a)}.tt .O{color:var(--b)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.ex{padding:10px;border-radius:12px;background:var(--c);margin-bottom:10px;animation:up .3s}
+.chip{display:inline-block;padding:4px 12px;border-radius:99px;background:var(--a);color:#fff;font-size:.8rem;margin:2px}
+.sws{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}.sw{width:38px;height:38px;border-radius:50%;border:3px solid transparent}.sw.on{border-color:var(--t)}
+#dr:not(.open){pointer-events:none}#dr .ov{position:fixed;inset:0;background:#0009;opacity:0;transition:opacity .3s;z-index:50}#dr aside{position:fixed;top:0;bottom:0;right:0;width:min(88vw,360px);background:var(--bg);border-left:1px solid var(--bd);transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:51;overflow:auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 30px}#dr.open .ov{opacity:1}#dr.open aside{transform:none}
+.toast{position:fixed;top:calc(70px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--t);color:var(--bg);padding:10px 18px;border-radius:99px;z-index:99;animation:up .3s;font-size:.9rem}
+#sp{position:fixed;inset:0;z-index:99;display:grid;place-items:center;text-align:center;background:var(--bg);transition:opacity .5s;overflow:hidden}.fl{position:absolute;opacity:.35;background:linear-gradient(135deg,var(--a),var(--b));animation:fl 5s ease-in-out infinite}
+#pbw{width:200px;height:6px;border-radius:9px;background:var(--bd);margin:18px auto}#pb{height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b))}
+.lab{background:linear-gradient(180deg,#1b2540,#0c1224);color:#e8ecff;border:1px solid var(--bd);border-radius:22px;padding:14px;margin-bottom:12px}.lab .m,.lab label{color:#aab4d6}.lab .btn2{color:#e8ecff;background:#ffffff14;border-color:#ffffff30}.lab input{background:#ffffff14;color:#e8ecff;border-color:#ffffff30}.lab .ex{color:#e8ecff}
+.sh{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.ch{padding:8px 12px;border-radius:12px;background:#ffffff18;border:1px solid #ffffff30;touch-action:none;user-select:none;cursor:grab;font-size:.85rem;color:#e8ecff}.ch i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:6px}
+svg.hot{filter:drop-shadow(0 0 10px #fff)}.gl{filter:drop-shadow(0 10px 14px #0009)}.ob{animation:dr 1.1s cubic-bezier(.3,.7,.4,1) both}.fw{stroke-dasharray:4 10;animation:fw 1s linear infinite}
+@keyframes dr{from{transform:translateY(-130px)}}@keyframes bu{to{transform:translateY(-80px);opacity:0}}@keyframes fw{to{stroke-dashoffset:-14}}
+textarea{background:var(--c);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;width:100%;margin:4px 0 10px;font:inherit;color:inherit}details.card summary{cursor:pointer;font-weight:800;margin-bottom:8px}details.card p{margin-top:6px;font-size:.92rem}.fb{height:10px;border-radius:6px;transition:width .6s}.grid .q{min-height:120px}
+input[type=file]{padding:8px}input[type=file]::file-selector-button{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border:0;border-radius:10px;padding:8px 14px;margin-inline-end:10px;font:inherit;cursor:pointer}
+.foc header,.foc nav,.foc main>h2{display:none}.foc main{padding-top:30px}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}.cd{aspect-ratio:1;border-radius:10px;border:1px solid var(--bd);background:var(--c);position:relative}.cd.on{background:var(--a);color:#fff}.cd.td{border-color:var(--a)}.cd b{position:absolute;bottom:4px;left:50%;width:5px;height:5px;margin-left:-2px;border-radius:50%;background:var(--b)}
+.lab .btn2.ok{background:#10b98155}@keyframes hb{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}30%{transform:scale(1)}45%{transform:scale(1.08)}}@keyframes br{50%{transform:scaleY(1.2)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--a)"/><stop offset="1" style="stop-color:var(--b)"/></linearGradient></defs></svg>
+<div id="sp"><i class="fl" style="width:60px;height:60px;border-radius:50%;top:12%;right:15%"></i><i class="fl" style="width:46px;height:46px;border-radius:12px;top:70%;right:70%;animation-delay:-2s"></i><i class="fl" style="width:80px;height:80px;border-radius:30% 70% 60% 40%;top:78%;right:12%;animation-delay:-1s"></i><i class="fl" style="width:36px;height:36px;border-radius:50%;top:20%;right:75%;animation-delay:-3s"></i>
+<div><h1 class="lg">همزی</h1><p class="m">همزی؛ همراه هوشمند مسیر یادگیری تو</p><div id="pbw"><div id="pb"></div></div><p>خوش آمدی، آماده‌ی یادگیری هستی؟</p></div></div>
+<div id="app"></div>
+<script>
+const $=s=>document.querySelector(s),fa=n=>EN()?String(n):AR()?String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]):String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const K='hamzi_v1',DEF={user:null,set:{theme:'purple',font:'Vazirmatn',mode:null,notif:true,goal:60,limit:5},sessions:[],tasks:[],g:{},ach:[]};
+let S;try{S=Object.assign({},DEF,JSON.parse(localStorage.getItem(K)))}catch(e){S=Object.assign({},DEF)}
+S.set=Object.assign({},DEF.set,S.set);
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){toast('ذخیره‌سازی در این مرورگر ممکن نیست')}};
+function toast(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2800)}
+const GR=['اول','دوم','سوم','چهارم','پنجم','ششم','هفتم','هشتم','نهم','دهم','یازدهم','دوازدهم'],LV=['نیاز به تقویت','متوسط','خوب','عالی'],CAT=['درس','تمرین','مرور','آزمون','شخصی'],PR=['','کم','متوسط','زیاد'];
+const TH=[['purple','بنفش نیمه‌شب','#8b5cf6'],['ocean','آبی اقیانوس','#0ea5e9'],['emerald','سبز زمرد','#10b981'],['sunset','نارنجی غروب','#f97316'],['rose','صورتی رز','#f43f5e'],['minimal','روشن مینیمال','#64748b']];
+const FN=['Vazirmatn','Noto Naskh Arabic','Lalezar','Noto Sans Arabic'];
+const QT=['هر جلسه‌ی کوتاه، یک قدم به هدفت نزدیک‌تری.','ثبات از شدت مهم‌تر است؛ امروز هم کمی مطالعه کن.','بعد از هر جلسه کمی استراحت کن تا تمرکزت برگردد.','پیشرفت یعنی تکرارِ کارهای کوچک.'];
+const P={home:'<path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',check:'<path d="M5 12l5 5 9-10"/>',game:'<path d="M6 6h12a4 4 0 0 1 4 4v4a3 3 0 0 1-5 2l-1-2H8l-1 2a3 3 0 0 1-5-2v-4a4 4 0 0 1 4-4zM8 10v4M6 12h4"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',pin:'<path d="M12 17v5M8 3h8l-1 7 3 3H6l3-3z"/>',trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>',edit:'<path d="M4 20h4L19 9l-4-4L4 16z"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',flask:'<path d="M9 3h6M10 3v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-10V3M7 15h10"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M19 17H6"/>'};
+const ic=(n,s=22)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${P[n]}</svg>`;
+const AC=[['#8b5cf6','#ec4899'],['#0ea5e9','#6366f1'],['#10b981','#06b6d4'],['#f97316','#ef4444'],['#f43f5e','#d946ef'],['#eab308','#f97316'],['#14b8a6','#3b82f6'],['#64748b','#1e293b']];
+function avs(a){if(typeof a=='string'&&a.startsWith('data:'))return a;const i=(+a||0)%8,[c1,c2]=AC[i],ac=[`<path d="M32 34a18 14 0 0 1 36 0z" fill="${c1}"/>`,`<circle cx="43" cy="40" r="5" fill="none" stroke="${c2}" stroke-width="2"/><circle cx="57" cy="40" r="5" fill="none" stroke="${c2}" stroke-width="2"/>`,`<path d="M30 42a20 20 0 0 1 40 0" fill="none" stroke="${c2}" stroke-width="4"/><rect x="26" y="40" width="7" height="12" rx="3" fill="${c1}"/><rect x="67" y="40" width="7" height="12" rx="3" fill="${c1}"/>`,`<path d="M50 6l3 8h8l-6 5 2 8-7-5-7 5 2-8-6-5h8z" fill="#fff"/>`][i%4];
+return 'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect width="100" height="100" fill="url(#g)"/><circle cx="50" cy="40" r="18" fill="#fff" fill-opacity=".95"/><path d="M18 100c0-22 14-34 32-34s32 12 32 34z" fill="#fff" fill-opacity=".85"/>${ac}<path d="M44 47q6 5 12 0" stroke="${c2}" stroke-width="2" fill="none" stroke-linecap="round"/></svg>`)}
+function apply(){const r=document.documentElement;r.dataset.theme=S.set.theme;r.dataset.mode=S.set.mode||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');r.style.setProperty('--font',`'${S.set.font}',sans-serif`);r.style.fontSize=(S.set.fs||100)+'%';const L=S.set.lang||'fa';r.lang=L;r.dir=L=='en'?'ltr':'rtl'}
+const C=2*Math.PI*54;
+const ring=(f,txt,id,lid)=>`<div class="rg"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="rt"/><circle cx="60" cy="60" r="54" class="rp" ${id?`id="${id}"`:''} stroke-dasharray="${C}" stroke-dashoffset="${C*(1-f)}"/></svg><div class="rl" ${lid?`id="${lid}"`:''}>${txt}</div></div>`;
+const fmt=s=>{s=Math.max(0,Math.round(s));const h=s/3600|0,m=(s%3600)/60|0,x=s%60,p=n=>String(n).padStart(2,'0');return fa(h?`${h}:${p(m)}:${p(x)}`:`${p(m)}:${p(x)}`)};
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const byDay=()=>{const m={};S.sessions.forEach(s=>{const k=iso(new Date(s.t));m[k]=(m[k]||0)+s.sec/60});return m};
+const days=n=>{const m=byDay();return[...Array(n)].map((_,i)=>{const d=new Date(Date.now()-(n-1-i)*864e5);return{d,v:m[iso(d)]||0}})};
+const sum=a=>a.reduce((x,y)=>x+y.v,0);
+let V='home',GV=null,G={iv:0,lv:0},T={tot:0,left:0,st:'idle',end:0,iv:0,done:null};
+function go(v){gstop();exf();V=v;if(v=='games')GV=null;render()}
+const views={
+home(){const u=S.user,tm=days(1)[0].v,h=new Date().getHours();return`${dq()}<section class="card hero"><div style="display:flex;gap:12px;align-items:center"><img class="av" src="${avs(u.avatar)}"><div><h2>${h<12?'صبح بخیر':h<18?'عصر بخیر':'شب بخیر'}، ${esc(u.first)}</h2><p class="m">پایه‌ی ${GR[u.grade-1]} · سطح ${LV[u.level]}</p></div></div>${ring(Math.min(1,tm/S.set.goal),fa(Math.round(tm))+'′')}</section><section class="card"><p>${QT[new Date().getDate()%QT.length]}</p><p class="m" style="font-size:.85rem">هدف امروز: ${fa(S.set.goal)} دقیقه مطالعه</p></section><div class="grid">${[['study','اتاق مطالعه','clock','تایمر و جلسه‌های تمرکز'],['stats','میانگین مطالعه','chart','آمار و پیشنهادها'],['lab','آزمایشگاه','flask','آزمایش‌های مجازی و امن'],['career','انتخاب رشته','book','معرفی رشته‌ها و کاربرگ سنجش'],['notes','یادداشت','edit','نوشتن، نقاشی و عکس'],['plan','برنامه‌ریزی','check','کارها، ساعت و اولویت']].map(c=>`<button class="card q" onclick="go('${c[0]}')">${ic(c[2],28)}<b>${c[1]}</b><span class="m" style="font-size:.8rem">${c[3]}</span></button>`).join('')}</div>`},
+study(){return`<h2 style="margin-bottom:10px">اتاق مطالعه</h2><section class="card c big">${ring(1,fmt(T.st=='idle'?25*60:T.left),'rp','tt')}<div class="row"><input id="dv" type="number" min="1" value="25" oninput="tUI()"><select id="du" onchange="tUI()"><option value="1">ثانیه</option><option value="60" selected>دقیقه</option><option value="3600">ساعت</option></select></div><div class="row"><button class="btn" id="bs" onclick="tStart()">شروع</button><button class="btn2" onclick="tReset()">بازنشانی</button></div><div class="row" style="margin-top:10px"><select onchange="snd(this.value)"><option value="">بدون صدا</option><option value="rain">باران</option><option value="white">نویز سفید</option><option value="brown">نویز قهوه‌ای</option></select><button class="btn2" onclick="foc()">حالت تمرکز</button></div><button class="btn2" style="width:100%;margin-top:8px" onclick="pomo()">پومودورو (۲۵ دقیقه تمرکز + ۵ دقیقه استراحت)</button></section><div id="done"></div>`},
+stats(){const w=days(7),pw=days(14).slice(0,7),wm=sum(w),pm=sum(pw),tot=S.sessions.reduce((a,s)=>a+s.sec,0)/60,cnt=S.sessions.length,avg=cnt?tot/cnt:0,dd=days(60).reverse();let st=0,i=dd[0].v>0?0:1;for(;i<dd.length&&dd[i].v>0;i++)st++;const cons=Math.round(days(14).filter(x=>x.v>0).length/14*100),mx=Math.max(1,...w.map(x=>x.v)),R=[];
+if(!cnt)R.push('هنوز جلسه‌ای ثبت نشده. با یک جلسه‌ی کوتاه شروع کن تا پیشنهادها از روی داده‌های خودت ساخته شوند.');else{if(pm>0&&wm>pm)R.push('مطالعه‌ی این هفته‌ات از هفته‌ی قبل بیشتر بوده است.');else if(pm>0&&wm<pm)R.push('این هفته کمتر از هفته‌ی قبل مطالعه کرده‌ای.');R.push(wm<S.set.goal*7?`این هفته ${fa(Math.round(wm))} دقیقه مطالعه کرده‌ای؛ هدف هفتگی تو ${fa(S.set.goal*7)} دقیقه است.`:'به هدف هفتگی‌ات رسیده‌ای.');R.push(`در ۱۴ روز گذشته ${fa(Math.round(cons*14/100))} روز مطالعه کرده‌ای؛ مطالعه‌ی هم‌زمان‌تر، روتین را منظم‌تر می‌کند.`);if(avg>90)R.push('میانگین جلسه‌هایت بلند است؛ استراحت‌های منظم را در نظر بگیر.')}
+return`<h2 style="margin-bottom:10px">میانگین مطالعه</h2><div class="st">${[['کل مطالعه',fa(Math.round(tot))+' دقیقه'],['تعداد جلسه‌ها',fa(cnt)],['میانگین جلسه',fa(Math.round(avg))+' دقیقه'],['پیاپی (روز)',fa(st)],['این هفته',fa(Math.round(wm))+' دقیقه'],['۳۰ روز اخیر',fa(Math.round(sum(days(30))))+' دقیقه'],['امروز',fa(Math.round(dd[0].v))+' دقیقه'],['پایداری ۱۴ روز',fa(cons)+'٪']].map(x=>`<div class="card c"><span class="m">${x[0]}</span><b>${x[1]}</b></div>`).join('')}</div><section class="card"><h3>۷ روز اخیر (دقیقه)</h3><div class="bars" style="margin-top:12px">${w.map(x=>`<div><span>${fa(Math.round(x.v))}</span><i style="height:${x.v/mx*100}%"></i><span class="m">${x.d.toLocaleDateString(LC(),{weekday:'short'})}</span></div>`).join('')}</div></section><section class="card"><h3>نقشه‌ی فعالیت ۳۵ روز</h3><div class="hm" style="margin-top:10px;direction:ltr">${days(35).map(x=>`<i title="${fa(Math.round(x.v))}" style="opacity:${x.v?Math.max(.25,Math.min(1,x.v/S.set.goal)):.1};${x.v?'':'background:var(--m)'}"></i>`).join('')}</div></section><section class="card"><h3>پیشنهادها</h3>${R.map(r=>`<p style="margin-top:8px">${r}</p>`).join('')}</section>`},
+plan(){const td=iso(new Date()),wk=iso(new Date(Date.now()+6*864e5)),ts=S.tasks.filter(t=>PF=='all'||(PF=='cal'?t.d==(CD||td):PF=='today'?t.d==td:t.d>=td&&t.d<=wk)).sort((a,b)=>b.pin-a.pin||a.done-b.done||(a.d+a.s).localeCompare(b.d+b.s)),dn=ts.filter(t=>t.done).length;
+return`<h2 style="margin-bottom:10px">برنامه‌ریزی</h2><section class="card"><input id="pt" placeholder="عنوان کار" maxlength="80"><input id="pds" placeholder="توضیحات (اختیاری)" maxlength="200"><div class="row"><div><label>تاریخ</label><input id="pdt" type="date" value="${(PF=='cal'&&CD)||td}"></div><div><label>شروع</label><input id="ps" type="time"></div><div><label>پایان</label><input id="pe" type="time"></div></div><div class="row"><div><label>اولویت</label><select id="pp"><option value="1">کم</option><option value="2" selected>متوسط</option><option value="3">زیاد</option></select></div><div><label>دسته</label><select id="pc">${CAT.map(c=>`<option>${c}</option>`).join('')}</select></div></div><button class="btn" style="width:100%" onclick="ta()">${PE?'ذخیره‌ی تغییرات':'افزودن کار'}</button></section><div class="tabs">${[['today','امروز'],['week','هفته'],['cal','تقویم'],['all','همه']].map(x=>`<button class="${PF==x[0]?'on':''}" onclick="PF='${x[0]}';render()">${x[1]}</button>`).join('')}</div>${PF=='cal'?calv():''}<p class="m" style="margin-bottom:8px">${fa(dn)} از ${fa(ts.length)} کار انجام شده</p>${ts.length?ts.map(t=>`<div class="card tk ${t.done?'dn':''}"><button class="ck" onclick="tg(${t.id})">${t.done?ic('check',16):''}</button><div class="g1"><b>${esc(t.t)}</b>${t.ds?`<small class="m">${esc(t.ds)}</small>`:''}<small class="m">${t.c} · ${fa(t.d)} ${t.s?fa(t.s)+'–'+fa(t.e||''):''}</small><span>${od(t)?'<span class="bd">عقب‌افتاده </span>':''}<span class="pr p${t.p}">اولویت ${PR[t.p]}</span></span></div><button class="ib" style="${t.pin?'color:var(--a)':''}" onclick="pn(${t.id})">${ic('pin',18)}</button><button class="ib" onclick="te(${t.id})">${ic('edit',18)}</button><button class="ib" onclick="tdl(${t.id})">${ic('trash',18)}</button></div>`).join(''):'<p class="card c m">کاری برای این بازه نیست. اولین کارت را اضافه کن.</p>'}`},
+games(){if(!GV)return`<h2 style="margin-bottom:10px">مرکز بازی</h2><div class="grid">${[['snake','مار','سرگرمی'],['ttt','دوز','مقابل هوش مصنوعی'],['math','چالش ریاضی','آموزشی · پایه‌ی '+GR[S.user.grade-1]]].map(g=>`<button class="card q" onclick="sg('${g[0]}')">${ic('game',28)}<b>${g[1]}</b><span class="m" style="font-size:.8rem">${g[2]}</span></button>`).join('')}</div><p class="m">محدودیت زمان بازی‌های سرگرمی: ${fa(S.set.limit)} دقیقه </p><button class="btn2" onclick="go('study')">بازگشت به اتاق مطالعه</button><p class="m"></p>${S.ach.length?`<section class="card"><h3>دستاوردها</h3>${S.ach.map(a=>`<span class="chip">${a}</span>`).join('')}</section>`:''}`;return`<button class="btn2" onclick="GV=null;go('games')" style="margin-bottom:10px">بازگشت</button><div id="ga" class="card"></div>`}};
+const after={study(){if(T.st!='idle'){$('#bs').textContent=T.st=='run'?'توقف':'ادامه'}if(T.done||T.bd)doneUI();tUI();const sl=document.querySelector('select[onchange^=snd]');if(sl)sl.value=SND.k||''},plan(){if(PE){const t=S.tasks.find(x=>x.id==PE);if(t){$('#pt').value=t.t;$('#pds').value=t.ds||'';$('#pdt').value=t.d;$('#ps').value=t.s;$('#pe').value=t.e;$('#pp').value=t.p;$('#pc').value=t.c}}},games(){if(GV)({snake,ttt,math:mqz})[GV]()}};
+function render(){apply();const a=$('#app');if(!S.user)return reg(a);a.innerHTML=`<header><button class="ib" onclick="dw(1)">${ic('menu',26)}</button><b class="logo">همزی</b><img class="av" src="${avs(S.user.avatar)}" onclick="dw(1)"></header><main class="in">${views[V]()}</main><nav><div class="it">${[['home','داشبورد','home']].map(n=>`<button class="${V==n[0]?'on':''}" onclick="go('${n[0]}')">${ic(n[2])}${n[1]}</button>`).join('')}</div><small>ساخت حسن محمدی</small></nav>`;after[V]&&after[V]()}
+/* avatars & registration */
+let PA=0;
+const avg=()=>`<div class="avs">${AC.map((_,i)=>`<button type="button" class="avb ${PA===i?'on':''}" onclick="PA=${i};avp()"><img src="${avs(i)}" alt=""></button>`).join('')}</div><label style="display:block;margin-top:10px">آپلود عکس از گالری</label><input type="file" accept="image/*" onchange="upl2(this)"><div id="ae"></div><div class="c" style="margin-top:8px"><img id="apv2" class="av" style="width:64px;height:64px" src="${avs(PA)}"></div>`;
+function avp(){document.querySelectorAll('.avb').forEach((b,i)=>b.classList.toggle('on',PA===i));document.querySelectorAll('#apv,#apv2').forEach(p=>p.src=avs(PA))}
+function up(i){const f=i.files[0];if(!f||!f.type.startsWith('image/'))return toast('فایل تصویر معتبر نیست');const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=160;const s=Math.min(im.width,im.height);c.getContext('2d').drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,160,160);PA=c.toDataURL('image/jpeg',.85);avp()};im.onerror=()=>toast('تصویر خوانده نشد');im.src=r.result};r.readAsDataURL(f)}
+const fields=u=>`<label>نام</label><input id="fn" maxlength="30" value="${esc(u.first||'')}"><label>نام خانوادگی</label><input id="ln" maxlength="40" value="${esc(u.last||'')}"><label>پایه‌ی تحصیلی</label><select id="gr">${GR.map((g,i)=>`<option value="${i+1}" ${u.grade==i+1?'selected':''}>${g}</option>`).join('')}</select><label>سطح تحصیلی</label><select id="lv">${LV.map((l,i)=>`<option value="${i}" ${u.level==i?'selected':''}>${l}</option>`).join('')}</select>`;
+function reg(a){PA=0;a.innerHTML=`<main class="in reg"><div class="c"><h1 class="lg">همزی</h1><p class="m" style="margin-bottom:16px">همزی؛ همراه هوشمند مسیر یادگیری تو</p></div><section class="card"><h3 style="margin-bottom:8px">ثبت‌نام دانش‌آموز</h3>${fields({grade:7,level:1})}<label>هدف مطالعه‌ی روزانه (دقیقه)</label><input id="gl" type="number" min="5" max="600" value="60"><label>تصویر پروفایل</label>${avg()}<button class="btn" style="width:100%;margin-top:14px" onclick="rg()">شروع یادگیری</button></section><p class="c m" style="font-size:.7rem">ساخت حسن محمدی</p></main>`}
+function rd(){const first=$('#fn').value.trim(),last=$('#ln').value.trim();if(first.length<2||last.length<2){toast('نام و نام خانوادگی را (حداقل ۲ حرف) وارد کن');return null}return{first,last,grade:+$('#gr').value,level:+$('#lv').value,avatar:PA}}
+function rg(){const u=rd();if(!u)return;const g=+$('#gl').value;if(!(g>=5&&g<=600))return toast('هدف مطالعه را بین ۵ تا ۶۰۰ دقیقه وارد کن');S.set.goal=g;S.user=u;save();render();chk()}
+/* drawer */
+function dw(o){let e=$('#dr');if(!e){e=document.createElement('div');e.id='dr';document.body.appendChild(e)}if(!o){e.classList.remove('open');return}PA=S.user.avatar;const s=S.set;
+e.innerHTML=`<div class="ov" onclick="dw(0)"></div><aside><div class="row" style="margin-bottom:10px"><h3>تنظیمات</h3><button class="ib" style="flex:none" onclick="dw(0)">${ic('x')}</button></div><div class="c"><img id="apv" class="av" style="width:72px;height:72px" src="${avs(PA)}"></div>${fields(S.user)}${avg()}<button class="btn" style="width:100%;margin:10px 0" onclick="sp()">ذخیره‌ی پروفایل</button><hr style="border:0;border-top:1px solid var(--bd);margin:10px 0"><label>حالت نمایش</label><div class="row"><button class="btn2" onclick="sset('mode','light')">روشن</button><button class="btn2" onclick="sset('mode','dark')">تاریک</button></div><label>پوسته</label><div class="sws">${TH.map(t=>`<button class="sw ${s.theme==t[0]?'on':''}" data-k="${t[0]}" title="${t[1]}" style="background:${t[2]}" onclick="sset('theme','${t[0]}');document.querySelectorAll('.sw').forEach(x=>x.classList.toggle('on',x.dataset.k=='${t[0]}'))"></button>`).join('')}</div><label>زبان / Language</label><div class="row"><button class="btn2" onclick="setLang('fa')">فارسی</button><button class="btn2" onclick="setLang('en')">English</button><button class="btn2" onclick="setLang('ar')">العربية</button></div><label>اندازه‌ی متن</label><input type="range" min="90" max="150" step="5" value="${s.fs||100}" oninput="sset('fs',+this.value)"><label>فونت</label><select onchange="sset('font',this.value)">${FN.map(f=>`<option ${s.font==f?'selected':''}>${f}</option>`).join('')}</select><label>هدف روزانه (دقیقه)</label><input type="number" min="5" max="600" value="${s.goal}" onchange="sset('goal',Math.max(5,Math.min(600,+this.value||60)))"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" style="width:auto;margin:0" ${s.notif?'checked':''} onchange="sset('notif',this.checked);if(this.checked)try{Notification.requestPermission()}catch(e){}">یادآوری کارهای عقب‌افتاده</label><label>یادآوری قبل از شروع کار</label><select onchange="sset('rm',+this.value)">${[5,10,15,30].map(v=>`<option value="${v}" ${(s.rm||10)==v?'selected':''}>${fa(v)} دقیقه</option>`).join('')}</select><button class="btn2" style="width:100%;margin-top:16px" onclick="rs(this)">پاک‌کردن همه‌ی داده‌ها</button></aside>`;requestAnimationFrame(()=>e.classList.add('open'))}
+function sset(k,v){S.set[k]=v;save();apply()}
+function sp(){const u=rd();if(!u)return;S.user=u;save();dw(0);render();toast('پروفایل ذخیره شد')}
+function rs(b){if(!b.dataset.c){b.dataset.c=1;b.textContent='مطمئنی؟ دوباره بزن';return}S=JSON.parse(JSON.stringify(DEF));save();dw(0);V='home';render()}
+/* timer */
+const beep=()=>{try{const a=new(window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(t=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.2,a.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+t+.3);o.start(a.currentTime+t);o.stop(a.currentTime+t+.3)})}catch(e){}};
+const inSec=()=>{const v=+($('#dv')||{}).value,u=+($('#du')||{}).value;return v>0&&u?v*u:0};
+function tUI(){const t=$('#tt');if(!t)return;const idle=T.st=='idle',s=idle?inSec():T.left;t.textContent=fmt(s);$('#rp').style.strokeDashoffset=idle?0:C*(1-T.left/(T.tot||1));$('#bs').textContent=T.st=='run'?'توقف':T.st=='pause'?'ادامه':'شروع'}
+function tStart(){if(T.st=='run'){T.left=Math.ceil((T.end-Date.now())/1000);T.st='pause';clearInterval(T.iv);return tUI()}if(T.st=='idle'){const s=inSec();if(!s||s>86400)return toast('مدت را بین ۱ ثانیه و ۲۴ ساعت وارد کن');T.tot=T.left=s;T.done=null;const d=$('#done');if(d)d.innerHTML=''}T.st='run';T.end=Date.now()+T.left*1000;clearInterval(T.iv);T.iv=setInterval(()=>{T.left=Math.max(0,Math.round((T.end-Date.now())/1000));if(!T.left)return tFin();tUI()},250);tUI()}
+function tReset(){clearInterval(T.iv);T.st='idle';T.left=0;T.brk=0;tUI()}
+function tFin(){clearInterval(T.iv);T.st='idle';T.left=0;beep();snd('');exf();if(T.brk){T.brk=0;T.done=null;T.bd=1;if(V=='study'){doneUI();tUI()}else toast('استراحت تمام شد');return}S.sessions.push({t:Date.now(),sec:T.tot});save();T.done=T.tot;T.bd=0;if(T.pm)T.pc=(T.pc||0)+1;if(V=='study'){doneUI();tUI()}else toast('جلسه‌ی مطالعه تمام شد')}
+function doneUI(){const d=$('#done');if(T.bd&&d){d.innerHTML=`<section class="card c"><h3>استراحت تمام شد</h3><button class="btn" onclick="pomo()">شروع دور بعدی تمرکز</button></section>`;return}if(d)d.innerHTML=`<section class="card c" style="animation:pop .5s"><h2>آفرین ${esc(S.user.first)}!</h2><p>${fa(Math.max(1,Math.round(T.done/60)))} دقیقه مطالعه ثبت شد.</p><p class="m">یک بازی کوتاه برای استراحت؟ زمان بازی محدود است.</p>${T.pm?`<button class="btn2" style="margin:10px 8px 0" onclick="brk()">استراحت ${fa((T.pc||0)%4?5:15)} دقیقه‌ای</button>`:''}<button class="btn" style="margin-top:10px" onclick="go('games')">بازی‌های کوتاه</button></section>`}
+/* planner */
+let PF='today',PE=null;
+const od=t=>!t.done&&new Date(t.d+'T'+(t.e||'23:59'))<new Date();
+function ta(){const t=$('#pt').value.trim(),d=$('#pdt').value,s=$('#ps').value,e=$('#pe').value;if(!t)return toast('عنوان کار را بنویس');if(!d)return toast('تاریخ را انتخاب کن');if(s&&e&&e<=s)return toast('ساعت پایان باید بعد از شروع باشد');const o={t,d,s,e,p:+$('#pp').value,c:$('#pc').value,ds:$('#pds').value.trim()};if(PE){Object.assign(S.tasks.find(x=>x.id==PE),o);PE=null}else S.tasks.push({id:Date.now(),done:false,pin:false,...o});save();render()}
+const tg=i=>{const t=S.tasks.find(x=>x.id==i);t.done=!t.done;save();render()},pn=i=>{const t=S.tasks.find(x=>x.id==i);t.pin=!t.pin;save();render()},te=i=>{PE=i;render();scrollTo(0,0)},tdl=i=>{S.tasks=S.tasks.filter(x=>x.id!=i);if(PE==i)PE=null;save();render()};
+function chk(){if(!S.set.notif)return;const n=S.tasks.filter(od).length;if(n)toast(`${fa(n)} کار عقب‌افتاده داری`)}
+/* games */
+function gstop(){clearInterval(G.iv);clearInterval(G.lv);G.lv=0;document.onkeydown=null}
+function sg(g){GV=g;render()}
+function lim(){if(G.lv)return;G.end=Date.now()+S.set.limit*60000;G.lv=setInterval(()=>{const r=Math.ceil((G.end-Date.now())/1000),e=$('#lm');if(e)e.textContent='زمان باقی‌مانده: '+fmt(r);if(r<=0){gstop();const a=$('#ga');if(a)a.innerHTML=`<div class="c"><h3>وقت بازی تمام شد</h3><p class="m">وقت برگشت به مطالعه است.</p><button class="btn" onclick="go('study')">اتاق مطالعه</button></div>`}},500)}
+function snake(){$('#ga').innerHTML=`<div class="c"><div class="row"><b>امتیاز: <span id="sc">۰</span></b><span id="lm" class="m"></span></div><canvas id="cv" width="300" height="300"></canvas><div class="dp"><button onclick="sd(0,-1)">▲</button><button onclick="sd(-1,0)">◀</button><button onclick="sd(0,1)">▼</button><button onclick="sd(1,0)">▶</button></div></div>`;
+const cv=$('#cv'),x=cv.getContext('2d'),N=15,Z=20,col=getComputedStyle(document.documentElement).getPropertyValue('--a').trim()||'#8b5cf6';let sn=[{x:7,y:7}],d={x:1,y:0},nd=d,sc=0,f;
+const pf=()=>{let p;do p={x:Math.random()*N|0,y:Math.random()*N|0};while(sn.some(s=>s.x==p.x&&s.y==p.y));return p};f=pf();
+window.sd=(a,b)=>{if(a!=-d.x||b!=-d.y)nd={x:a,y:b}};
+document.onkeydown=e=>{const m={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0]}[e.key];if(m){e.preventDefault();sd(...m)}};
+let tx,ty;cv.ontouchstart=e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY};cv.ontouchend=e=>{const a=e.changedTouches[0].clientX-tx,b=e.changedTouches[0].clientY-ty;Math.abs(a)>Math.abs(b)?sd(a>0?1:-1,0):sd(0,b>0?1:-1)};
+const draw=()=>{x.clearRect(0,0,300,300);x.fillStyle='rgba(128,128,160,.13)';x.fillRect(0,0,300,300);x.fillStyle='#f43f5e';x.beginPath();x.arc(f.x*Z+10,f.y*Z+10,8,0,7);x.fill();sn.forEach((s,i)=>{x.fillStyle=i?col:'#fff';x.fillRect(s.x*Z+1,s.y*Z+1,Z-2,Z-2)})};
+G.iv=setInterval(()=>{d=nd;const h={x:sn[0].x+d.x,y:sn[0].y+d.y};if(h.x<0||h.y<0||h.x>=N||h.y>=N||sn.some(s=>s.x==h.x&&s.y==h.y)){gstop();const b=S.g.snake=Math.max(S.g.snake||0,sc);save();$('#ga').innerHTML=`<div class="c"><h3>باختی!</h3><p>امتیاز: ${fa(sc)} · بهترین: ${fa(b)}</p><button class="btn" onclick="sg('snake')">دوباره</button></div>`;return}sn.unshift(h);if(h.x==f.x&&h.y==f.y){sc++;f=pf();$('#sc').textContent=fa(sc)}else sn.pop();draw()},130);draw();lim()}
+const L=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+const win=b=>{for(const[l,m,n]of L)if(b[l]&&b[l]==b[m]&&b[l]==b[n])return b[l];return b.every(Boolean)?'D':null};
+function mm(b,t){const w=win(b);if(w)return w=='O'?1:w=='X'?-1:0;let r=t=='O'?-2:2;for(let i=0;i<9;i++)if(!b[i]){b[i]=t;const v=mm(b,t=='O'?'X':'O');b[i]='';r=t=='O'?Math.max(r,v):Math.min(r,v)}return r}
+function ttt(){let b=Array(9).fill(''),over=false;const t=S.g.ttt||(S.g.ttt={w:0,l:0,d:0});
+const paint=m=>{$('#ga').innerHTML=`<div class="c"><div class="row"><b>برد ${fa(t.w)} · باخت ${fa(t.l)} · مساوی ${fa(t.d)}</b><span id="lm" class="m"></span></div><div class="tt">${b.map((v,i)=>`<button class="${v}" onclick="tp(${i})">${v}</button>`).join('')}</div><p>${m||'نوبت توست (X)'}</p>${over?'<button class="btn" onclick="ttt()">دور جدید</button>':''}</div>`};
+window.tp=i=>{if(b[i]||over)return;b[i]='X';let w=win(b);if(!w){const e=[];b.forEach((v,j)=>!v&&e.push(j));let m,bs=-2;if(Math.random()<.2)m=e[Math.random()*e.length|0];else e.forEach(j=>{b[j]='O';const v=mm(b,'X');b[j]='';if(v>bs){bs=v;m=j}});b[m]='O';w=win(b)}
+if(w){over=true;t[w=='X'?'w':w=='O'?'l':'d']++;save();paint(w=='X'?'بردی! آفرین':w=='O'?'هوش مصنوعی برد':'مساوی شد')}else paint()};paint();lim()}
+let Q;
+function mqz(){$('#ga').innerHTML=`<div class="c"><h3>چالش ریاضی · پایه‌ی ${GR[S.user.grade-1]}</h3><p class="m">سطح سختی را انتخاب کن (۱۰ سؤال)</p><div class="row">${['آسان','متوسط','سخت'].map((x,i)=>`<button class="btn" onclick="mgo(${i+1})">${x}</button>`).join('')}</div>${S.g.math!=null?`<p class="m">بهترین امتیاز: ${fa(S.g.math)} از ۱۰</p>`:''}</div>`}
+function mgo(d){Q={d,i:0,sc:0};mnext()}
+function mnext(){if(Q.i>=10)return mend();const g=+S.user.grade,k=Math.min(5,(g<=4?1:g<=8?2:3)+Q.d-1),r=n=>1+Math.floor(Math.random()*n);let q,a,e,p='حاصل را پیدا کن';
+if(k<2){const x=r(20),y=r(20);q=`${x} + ${y}`;a=x+y;e=`${x} + ${y} = ${a}`}
+else if(k==2){const x=r(12),y=r(12);q=`${x} × ${y}`;a=x*y;e=`ضرب ${x} در ${y} برابر ${a} است.`}
+else if(k==3){const x=r(9),m=r(8)+1,c=r(20);q=`${m}x + ${c} = ${m*x+c}`;a=x;p='مقدار x چند است؟';e=`ابتدا ${c} را از دو طرف کم می‌کنیم: ${m}x = ${m*x}. سپس بر ${m} تقسیم می‌کنیم: x = ${x}.`}
+else if(k==4){const x=r(11)+5,y=r(5);q=`${x}² − ${y}²`;a=x*x-y*y;e=`${x}² = ${x*x} و ${y}² = ${y*y}؛ تفاضل آن‌ها ${a} است.`}
+else{const u=r(9),v=r(9)+1;q=`x² − ${u+v}x + ${u*v} = 0`;a=Math.max(u,v);p='ریشه‌ی بزرگ‌تر کدام است؟';e=`معادله به (x − ${u})(x − ${v}) = 0 تجزیه می‌شود؛ ریشه‌ها ${u} و ${v} هستند.`}
+Q.a=a;Q.e=e;const o=new Set([a]);while(o.size<4){const v=a+r(5)*(Math.random()<.5?-1:1);if(v>=0)o.add(v)}
+$('#ga').innerHTML=`<div class="c"><div class="row"><b>سؤال ${fa(Q.i+1)} از ${fa(10)}</b><b>امتیاز ${fa(Q.sc)}</b></div><h2 style="margin-top:14px"><bdi dir="ltr">${q}</bdi></h2><p class="m">${p}</p><div class="opts">${[...o].sort(()=>Math.random()-.5).map(v=>`<button class="btn2" data-v="${v}" onclick="mans(this,${v})">${fa(v)}</button>`).join('')}</div><div id="ex"></div></div>`}
+function mans(b,v){const ok=v==Q.a;document.querySelectorAll('.opts button').forEach(x=>{x.disabled=true;if(+x.dataset.v==Q.a)x.classList.add('ok')});if(!ok)b.classList.add('no');else Q.sc++;Q.i++;$('#ex').innerHTML=`<div class="ex"><b>${ok?'درست گفتی!':'پاسخ درست '+fa(Q.a)+' است.'}</b><p>${Q.e}</p></div><button class="btn" onclick="mnext()">${Q.i>=10?'نتیجه':'بعدی'}</button>`}
+function mend(){const b=S.g.math=Math.max(S.g.math||0,Q.sc);if(Q.sc>=8&&!S.ach.includes('ستاره ریاضی')){S.ach.push('ستاره ریاضی');toast('دستاورد جدید: ستاره ریاضی')}save();$('#ga').innerHTML=`<div class="c" style="animation:pop .4s"><h2>${fa(Q.sc)} از ${fa(10)}</h2><p>${Q.sc>=8?'عالی بود!':Q.sc>=5?'خوب بود، ادامه بده.':'اشکالی ندارد؛ توضیح‌ها را مرور کن و دوباره امتحان کن.'}</p><p class="m">بهترین امتیاز: ${fa(b)}</p><button class="btn" onclick="mqz()">دوباره</button></div>`}
+/* lab */
+const EX=[['ph','اسیدی و بازی','شیمی',7,'رنگ نشانگر جهانی را با افزودن مواد ببین'],['den','چگالی مایعات','شیمی',7,'مایعات را لایه‌لایه کن و اجسام را بینداز'],['cir','مدار الکتریکی','فیزیک',8,'لامپ‌ها را سری یا موازی ببند'],['cell','سلول و میکروسکوپ','زیست',7,'با بزرگ‌نمایی اجزای سلول را پیدا کن']];
+let LB={ex:null};const fp=x=>EN()?String(x):fa(x).replace('.','٫');
+views.lab=()=>{const g=S.user.grade;if(!LB.ex)return`<h2 style="margin-bottom:6px">آزمایشگاه مجازی</h2><p class="m" style="margin-bottom:10px">همه‌ی آزمایش‌ها شبیه‌سازی ساده و ایمن‌اند و ماده‌ی واقعی لازم ندارند.</p><div class="grid">${EX.map(x=>`<button class="lab q" onclick="LB.ex='${x[0]}';render()"><b>${x[1]}</b><span style="font-size:.8rem;opacity:.8">${x[4]}</span><span class="chip" style="align-self:flex-start;${g<x[3]?'background:#64748b':''}">${x[2]} · ${g<x[3]?'مناسب پایه‌ی بالاتر':'مناسب پایه‌ی تو'}</span></button>`).join('')}</div>`;return`<button class="btn2" onclick="LB.ex=null;render()" style="margin-bottom:10px">بازگشت به آزمایشگاه</button><div class="lab" id="lb"></div><div class="card" id="qz"></div>`};
+after.lab=()=>{cancelAnimationFrame(LB.raf);if(LB.ex){({ph:phI,den:dnI,cir:ciI,cell:ceI,proj:prI,pen:peI,tit:tiI,hrt:hrI})[LB.ex]();qzI(LB.ex)}};
+function dgs(e,id,fn){e.preventDefault();const g=document.createElement('div');g.className='ch';g.style.cssText='position:fixed;z-index:90;pointer-events:none;opacity:.9';g.textContent=e.currentTarget.textContent;document.body.appendChild(g);const x0=e.clientX,y0=e.clientY;let mv=0;const inz=ev=>{const z=$('#dz');if(!z)return false;const r=z.getBoundingClientRect();return ev.clientX>r.left&&ev.clientX<r.right&&ev.clientY>r.top&&ev.clientY<r.bottom};const mf=ev=>{g.style.left=ev.clientX-30+'px';g.style.top=ev.clientY-20+'px';if(Math.abs(ev.clientX-x0)+Math.abs(ev.clientY-y0)>8)mv=1;const z=$('#dz');if(z)z.classList.toggle('hot',inz(ev))};mf(e);const uf=ev=>{removeEventListener('pointermove',mf);removeEventListener('pointerup',uf);g.remove();const z=$('#dz');if(z)z.classList.remove('hot');if(!mv||inz(ev))fn(id)};addEventListener('pointermove',mf);addEventListener('pointerup',uf)}
+/* pH */
+const SUB={lem:['آب لیمو',2,'#fde047'],vin:['سرکه',3,'#fbbf24'],wat:['آب',7,'#93c5fd'],sod:['جوش‌شیرین رقیق',8.3,'#e5e7eb'],soa:['محلول صابون رقیق',10,'#c4b5fd']};
+const phv=()=>{let n=0;LB.v.forEach(k=>{const p=SUB[k][1];n+=Math.pow(10,-p)-Math.pow(10,-(14-p))});n/=LB.v.length||1;if(Math.abs(n)<1e-8)return 7;return Math.max(0,Math.min(14,n>0?-Math.log10(n):14+Math.log10(-n)))};
+function phI(){LB.v=[];phR()}
+function phA(k){if(LB.v.length>=8)return toast('بشر پر شد');LB.v.push(k);LB.b=1;phR();LB.b=0}
+function phR(){const p=phv(),n=LB.v.length,h=p<7?Math.max(0,(p-1)/6*120):120+(p-7)/6*160,ly=190-n*17;$('#lb').innerHTML=`<h3>اسیدی و بازی (pH)</h3><p>هدف: با نشانگر جهانی اسیدی یا بازی‌بودن محلول‌ها را بشناس. مواد را بکش و داخل بشر بینداز (یا روی آن‌ها بزن).</p><div class="sh">${Object.entries(SUB).map(([k,v])=>`<div class="ch" onpointerdown="dgs(event,'${k}',phA)"><i style="background:${v[2]}"></i>${v[0]}</div>`).join('')}</div><svg id="dz" viewBox="0 0 200 230" class="gl" style="width:min(100%,260px);display:block;margin:auto"><defs><clipPath id="bk"><path d="M52 40h96l-8 160a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z"/></clipPath><linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><rect x="20" y="212" width="160" height="12" rx="4" fill="#6b4a2b"/><g clip-path="url(#bk)">${n?`<rect x="40" y="${ly}" width="130" height="${212-ly}" fill="hsl(${h} 80% 52%)"/>`:''}${LB.b?[0,1,2,3,4].map(i=>`<circle cx="${72+i*14}" cy="195" r="${2+i%3}" fill="#fff" opacity=".8" style="animation:bu 1.2s ${i*.15}s ease-out both"/>`).join(''):''}</g><path d="M52 40h96l-8 160a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="url(#sh)" stroke="#cfe3ff" stroke-width="3"/></svg><div style="direction:ltr;position:relative;height:12px;border-radius:9px;margin:16px 0 8px;background:linear-gradient(90deg,hsl(0 80% 52%),hsl(60 80% 52%),hsl(120 80% 52%),hsl(200 80% 52%),hsl(280 80% 52%))"><i style="position:absolute;top:-4px;width:6px;height:20px;background:#fff;border-radius:3px;left:${p/14*100}%"></i></div><b>pH ≈ ${fp(p.toFixed(1))} · ${!n?'مادهای اضافه نشده':p<6.5?'اسیدی':p>7.5?'بازی':'خنثی'}</b><p class="m">pH کمتر از ۷ اسیدی، برابر ۷ خنثی و بیشتر از ۷ بازی است. در این شبیه‌سازی ساده، اسید و باز تا حدی یکدیگر را خنثی می‌کنند.</p><button class="btn2" onclick="phI()">شروع دوباره</button>`}
+/* density */
+const LQ={hon:['عسل',1.4,'#f59e0b'],bri:['آب نمک',1.2,'#7dd3fc'],wat:['آب',1,'#60a5fa'],oil:['روغن',.92,'#fde68a']},OB={cor:['چوب‌پنبه',.24,'#d6a56b'],ice:['یخ',.92,'#e0f2fe'],pot:['سیب‌زمینی',1.08,'#c9a66b'],alu:['آلومینیوم',2.7,'#cbd5e1'],iro:['آهن',7.8,'#475569']};
+function dnI(){LB.l=[];LB.o=[];dnR()}
+function dnL(k){if(LB.l.includes(k))return toast('این مایع قبلاً اضافه شده');if(LB.l.length>=4)return toast('استوانه پر شد');LB.l.push(k);dnR()}
+function dnO(k){if(!LB.l.length)return toast('اول مایع داخل استوانه بریز');if(!LB.o.includes(k))LB.o.push(k);dnR()}
+function dnR(){const B=208,ls=[...LB.l].sort((a,b)=>LQ[b][1]-LQ[a][1]),n=ls.length,res=LB.o.map(k=>{const d=OB[k][1];let i=n-1;while(i>=0&&d>LQ[ls[i]][1])i--;return{y:i<0?B-9:B-45*(i+1)+(i==n-1?6:0),t:i<0?'به ته ظرف رفت (چگالی‌اش از همه‌ی مایع‌ها بیشتر است)':i==n-1?'روی سطح مایع شناور شد':`در مرز بالای «${LQ[ls[i]][0]}» ایستاد`}});
+$('#lb').innerHTML=`<h3>چگالی مایعات</h3><p>هدف: ببین چرا بعضی مایعات و اجسام بالا یا پایین می‌مانند. چگالی (گرم بر سانتی‌متر مکعب) کنار نام هر ماده است.</p><div class="sh">${Object.entries(LQ).map(([k,v])=>`<div class="ch" onpointerdown="dgs(event,'${k}',dnL)"><i style="background:${v[2]}"></i>${v[0]} (${fp(v[1])})</div>`).join('')}</div><div class="sh">${Object.entries(OB).map(([k,v])=>`<div class="ch" onpointerdown="dgs(event,'${k}',dnO)"><i style="background:${v[2]}"></i>${v[0]} (${fp(v[1])})</div>`).join('')}</div><svg id="dz" viewBox="0 0 200 240" class="gl" style="width:min(100%,240px);display:block;margin:auto"><rect x="20" y="222" width="160" height="12" rx="4" fill="#6b4a2b"/>${ls.map((k,i)=>`<rect x="51" y="${B-45*(i+1)}" width="98" height="45" fill="${LQ[k][2]}" opacity=".85"/>`).join('')}${res.map((r,j)=>`<g class="ob"><circle cx="${66+j*17}" cy="${r.y}" r="8" fill="${OB[LB.o[j]][2]}" stroke="#0006"/></g>`).join('')}<path d="M50 20v192a8 8 0 0 0 8 8h84a8 8 0 0 0 8-8V20" fill="none" stroke="#cfe3ff" stroke-width="3"/></svg>${res.map((r,j)=>`<p>${OB[LB.o[j]][0]} (${fp(OB[LB.o[j]][1])}): ${r.t}</p>`).join('')}<p class="m">قاعده: جسم تا جایی پایین می‌رود که چگالی مایع از چگالی خودش بیشتر شود.</p><button class="btn2" onclick="dnI()">شروع دوباره</button>`}
+/* circuit */
+function ciI(){LB.c={v:6,n:2,m:'s',on:1};$('#lb').innerHTML=`<h3>مدار الکتریکی</h3><p>هدف: ببین اتصال سری و موازی چگونه جریان و روشنایی لامپ‌ها را تغییر می‌دهد. (هر لامپ ۱۰ اهم و مناسب ۶ ولت)</p><label>ولتاژ باتری</label><input type="range" min="1.5" max="9" step=".5" value="6" oninput="LB.c.v=+this.value;ciR()"><div class="row"><button class="btn2" onclick="LB.c.m='s';ciR()">سری</button><button class="btn2" onclick="LB.c.m='p';ciR()">موازی</button></div><div class="row" style="margin-top:8px">${[1,2,3].map(n=>`<button class="btn2" onclick="LB.c.n=${n};ciR()">${fa(n)} لامپ</button>`).join('')}<button class="btn2" onclick="LB.c.on=1-LB.c.on;ciR()">کلید</button></div><div id="cs"></div>`;ciR()}
+function ciR(){const c=LB.c,R=10,n=c.n,p=c.m=='p',Rt=p?R/n:R*n,I=c.on?c.v/Rt:0,vb=p?c.v:c.v/n,P=c.on?vb*vb/R:0,br=Math.min(1,P/3.6),xs=[...Array(n)].map((_,i)=>160+(i-(n-1)/2)*60),d=`M40 40H260V140H40Z${p?xs.map(x=>`M${x} 40V140`).join(''):''}`,by=p?90:40;
+$('#cs').innerHTML=`<svg viewBox="0 0 300 170" style="width:100%;max-width:380px;display:block;margin:8px auto"><path d="${d}" fill="none" stroke="#64748b" stroke-width="4"/>${c.on?`<path d="${d}" fill="none" stroke="#fde047" stroke-width="2" class="fw"/>`:''}<rect x="30" y="70" width="20" height="40" rx="4" fill="#0ea5e9"/>${xs.map(x=>`<circle cx="${x}" cy="${by}" r="${14+br*12}" fill="rgba(253,224,71,${br*.45})"/><circle cx="${x}" cy="${by}" r="13" fill="rgba(253,224,71,${.1+br*.9})" stroke="#cfe3ff" stroke-width="2"/>`).join('')}<path d="M140 140l${c.on?'20 0':'18 -16'}" stroke="${c.on?'#22c55e':'#ef4444'}" stroke-width="5" stroke-linecap="round"/></svg><p>ولتاژ ${fp(c.v)} ولت · مقاومت کل ${fp(Rt.toFixed(1))} اهم · جریان ${fp(I.toFixed(2))} آمپر</p><p>توان هر لامپ: ${fp(P.toFixed(2))} وات${P>5.4?' — بیش از حد؛ در واقعیت لامپ می‌سوزد.':''}</p><p class="m">${p?'در اتصال موازی ولتاژ هر لامپ برابر ولتاژ باتری است و با افزودن لامپ، جریان کل بیشتر می‌شود.':'در اتصال سری جریان در همه‌ی لامپ‌ها یکی است و ولتاژ بین آن‌ها تقسیم می‌شود.'}</p>`}
+/* cell */
+const CL={a:[['mem','غشای سلولی','ورود و خروج مواد را کنترل می‌کند.',40,'<ellipse rx="50" ry="42" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>'],['nuc','هسته','مرکز فرمان سلول است و DNA در آن قرار دارد.',100,'<circle cx="-8" cy="-4" r="14" fill="#a78bfa"/>'],['mit','میتوکندری','انرژی سلول را از مواد غذایی آزاد می‌کند.',150,'<ellipse cx="22" cy="14" rx="9" ry="5" fill="#fb923c"/><ellipse cx="-26" cy="16" rx="9" ry="5" fill="#fb923c"/>']],p:[['wal','دیواره‌ی سلولی','لایه‌ی سفت بیرونی که به گیاه استحکام می‌دهد.',40,'<rect x="-48" y="-38" width="96" height="76" rx="6" fill="#bbf7d0" stroke="#166534" stroke-width="3"/>'],['vac','واکوئل','آب و مواد را ذخیره می‌کند.',80,'<ellipse cx="12" cy="0" rx="22" ry="18" fill="#bae6fd"/>'],['nuc','هسته','مرکز فرمان سلول است و DNA در آن قرار دارد.',100,'<circle cx="-24" cy="-12" r="10" fill="#a78bfa"/>'],['chl','کلروپلاست','محل فتوسنتز است؛ انرژی نور را به قند تبدیل می‌کند.',150,'<ellipse cx="-28" cy="18" rx="8" ry="5" fill="#22c55e"/><ellipse cx="26" cy="-24" rx="8" ry="5" fill="#22c55e"/><ellipse cx="30" cy="24" rx="8" ry="5" fill="#22c55e"/>']]};
+function ceI(){LB.cl={p:0,z:60,f:{},s:null};$('#lb').innerHTML=`<h3>سلول و میکروسکوپ</h3><p>هدف: با تغییر بزرگ‌نمایی اجزای سلول را پیدا کن و روی هرکدام بزن.</p><div class="row"><button class="btn2" onclick="LB.cl={p:0,z:LB.cl.z,f:{},s:null};ceR()">سلول جانوری</button><button class="btn2" onclick="LB.cl={p:1,z:LB.cl.z,f:{},s:null};ceR()">سلول گیاهی</button></div><label>بزرگ‌نمایی</label><input type="range" min="40" max="250" value="60" oninput="LB.cl.z=+this.value;ceR()"><div id="cs"></div>`;ceR()}
+function ceR(){const c=LB.cl,L=CL[c.p?'p':'a'];$('#cs').innerHTML=`<svg viewBox="0 0 200 200" style="width:min(100%,300px);display:block;margin:8px auto"><defs><clipPath id="mc"><circle cx="100" cy="100" r="92"/></clipPath><radialGradient id="mg"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#cbd5e1"/></radialGradient></defs><circle cx="100" cy="100" r="92" fill="url(#mg)"/><g clip-path="url(#mc)"><g transform="translate(100 100) scale(${c.z/100})">${L.map(o=>`<g onclick="ces('${o[0]}')" style="cursor:pointer;${c.z<o[3]?'display:none':''}">${o[4]}</g>`).join('')}</g></g><circle cx="100" cy="100" r="95" fill="none" stroke="#1e293b" stroke-width="10"/></svg><p>بزرگ‌نمایی ×${fa(c.z)} · پیدا شده: ${fa(Object.keys(c.f).length)} از ${fa(L.length)}</p>${c.s?`<div class="ex" style="background:#ffffff18"><b>${c.s[1]}</b><p>${c.s[2]}</p></div>`:'<p class="m">بزرگ‌نمایی را زیاد کن تا اجزای بیشتری ظاهر شوند.</p>'}`}
+function ces(id){const c=LB.cl,L=CL[c.p?'p':'a'];c.f[id]=1;c.s=L.find(x=>x[0]==id);ceR();if(Object.keys(c.f).length==L.length&&!S.ach.includes('میکروسکوپ‌کار')){S.ach.push('میکروسکوپ‌کار');save();toast('همه‌ی اجزا را پیدا کردی!')}}
+/* quiz */
+const QZ={ph:[['pH آب خالص چقدر است؟',['۳','۷','۱۰'],1,'آب خالص خنثی است و pH آن حدود ۷ است.'],['آب لیمو چه نوع محلولی است؟',['اسیدی','خنثی','بازی'],0,'pH آب لیمو حدود ۲ است، پس اسیدی است.'],['با افزودن مقدار زیادی ماده‌ی بازی به یک اسید، pH چه می‌شود؟',['کمتر می‌شود','بیشتر می‌شود','تغییر نمی‌کند'],1,'باز، یون‌های اسیدی را خنثی می‌کند و pH بالاتر می‌رود.',1]],den:[['جسمی با چگالی کمتر از مایع چه می‌شود؟',['شناور می‌شود','ته‌نشین می‌شود','حل می‌شود'],0,'چگالی کمتر یعنی جسم روی مایع می‌ماند.'],['کدام مایع در ته ظرف قرار می‌گیرد؟',['روغن','آب','عسل'],2,'عسل چگالی بیشتری دارد.'],['چرا یخ روی آب شناور است؟',['چگالی یخ کمتر از آب است','یخ سنگین‌تر است','یخ حل می‌شود'],0,'چگالی یخ حدود ۰٫۹۲ و کمتر از آب است.',1]],cir:[['در مدار سری با افزودن لامپ، روشنایی هر لامپ؟',['بیشتر می‌شود','کمتر می‌شود','ثابت می‌ماند'],1,'ولتاژ بین لامپ‌ها تقسیم می‌شود.'],['در اتصال موازی ولتاژ هر لامپ؟',['برابر ولتاژ باتری','کمتر از باتری','نصف باتری'],0,'هر شاخه مستقیماً به باتری وصل است.'],['رابطه‌ی قانون اهم کدام است؟',['V = I × R','V = I ÷ R','I = V × R'],0,'ولتاژ برابر جریان ضرب در مقاومت است.',1]],cell:[['کدام اندامک فقط در سلول گیاهی است؟',['میتوکندری','کلروپلاست','هسته'],1,'کلروپلاست محل فتوسنتز است.'],['مرکز فرمان سلول کدام است؟',['هسته','واکوئل','غشا'],0,'هسته DNA را در خود دارد.'],['میتوکندری چه کاری می‌کند؟',['تولید انرژی','ذخیره‌ی آب','ساخت دیواره'],0,'میتوکندری انرژی قابل استفاده‌ی سلول را فراهم می‌کند.',1]]};
+let QS;
+function qzI(k){QS={k,i:0,s:0,l:QZ[k].filter(q=>!q[4]||S.user.grade>=9)};qzR()}
+function qzR(){const e=$('#qz');if(!e)return;if(QS.i>=QS.l.length){const nm='دستاورد آزمایشگاه: '+EX.find(x=>x[0]==QS.k)[1];if(QS.s==QS.l.length&&!S.ach.includes(nm)){S.ach.push(nm);save();toast('دستاورد جدید!')}e.innerHTML=`<h3>آزمون کوتاه</h3><p>${fa(QS.s)} از ${fa(QS.l.length)} درست</p><button class="btn2" onclick="qzI('${QS.k}')">دوباره</button>`;return}const q=QS.l[QS.i];e.innerHTML=`<h3>آزمون کوتاه · سؤال ${fa(QS.i+1)}</h3><p>${q[0]}</p><div class="opts" style="grid-template-columns:1fr">${q[1].map((o,j)=>`<button class="btn2" data-j="${j}" onclick="qa(${j})">${o}</button>`).join('')}</div><div id="qe"></div>`}
+function qa(j){const q=QS.l[QS.i];document.querySelectorAll('#qz .opts button').forEach(b=>{b.disabled=true;if(+b.dataset.j==q[2])b.classList.add('ok')});if(j!=q[2])document.querySelector(`#qz [data-j="${j}"]`).classList.add('no');else QS.s++;QS.i++;$('#qe').innerHTML=`<div class="ex">${q[3]}</div><button class="btn" onclick="qzR()">${QS.i>=QS.l.length?'نتیجه':'بعدی'}</button>`}
+/* upload */
+async function upl(i){const f=i.files&&i.files[0];if(!f)return;if(f.size>15e6)return toast('حجم تصویر زیاد است (حداکثر ۱۵ مگابایت)');try{const im=await ldi(f);const w=im.width,h=im.height,s=Math.min(w,h),c=document.createElement('canvas');c.width=c.height=160;c.getContext('2d').drawImage(im,(w-s)/2,(h-s)/2,s,s,0,0,160,160);PA=c.toDataURL('image/jpeg',.85);avp();toast('تصویر انتخاب شد')}catch(e){toast('این تصویر خوانده نشد؛ فرمت JPG یا PNG را امتحان کن')}}
+/* career */
+const F4=['mp','ex','hu','tv'],FC={mp:'#6366f1',ex:'#10b981',hu:'#f59e0b',is:'#8b5cf6',tv:'#ef4444'};
+const FD=[
+['mp','ریاضی و فیزیک','شاخه‌ی نظری؛ مناسب کسانی که از ریاضی، فیزیک و حل مسئله لذت می‌برند.','ریاضی، فیزیک، شیمی، هندسه، حسابان','استدلال منطقی، تحلیل، دقت، پشتکار در تمرین',[['مهندسی (برق، مکانیک، عمران، کامپیوتر، شیمی، صنایع و …)','طراحی و ساخت سازه‌ها، دستگاه‌ها و سیستم‌ها'],['ریاضی و آمار','مدل‌سازی، نظریه و تحلیل داده'],['فیزیک و نجوم','شناخت قوانین طبیعت و جهان'],['علوم کامپیوتر و هوش مصنوعی','الگوریتم، نرم‌افزار و داده']],'مهندس، برنامه‌نویس، تحلیل‌گر داده، پژوهشگر، مدرس','حوزه‌های کاری فنی و پژوهشی گسترده','حجم مباحث و رقابت بالا','کتاب‌های درسی، المپیادها، دوره‌های آنلاین معتبر'],
+['ex','علوم تجربی','شاخه‌ی نظری؛ مناسب علاقه‌مندان به بدن انسان، طبیعت، سلامت و آزمایش.','زیست‌شناسی، شیمی، فیزیک، ریاضی','نظم در مطالعه، دقت، حافظه‌ی خوب، همدلی',[['پزشکی، دندانپزشکی و داروسازی','درمان بیماران و تأمین دارو؛ مسیر تحصیلی طولانی'],['پرستاری و مامایی','مراقبت مستقیم از بیماران'],['علوم آزمایشگاهی، بهداشت و تغذیه','تشخیص، پیشگیری و سلامت عمومی'],['زیست‌شناسی و علوم زیستی','پژوهش درباره‌ی موجودات زنده و زیست‌فناوری'],['کشاورزی و منابع طبیعی','تولید غذا و حفاظت از محیط‌زیست']],'پزشک، پرستار، داروساز، کارشناس بهداشت، پژوهشگر زیستی','نیاز همیشگی جامعه به خدمات سلامت','رقابت در برخی رشته‌ها و مباحث حفظی زیاد','کتاب‌های زیست و شیمی، المپیاد زیست، منابع آموزشی معتبر'],
+['hu','ادبیات و علوم انسانی','شاخه‌ی نظری؛ مناسب کسانی که به انسان، جامعه، زبان و اندیشه علاقه دارند.','ادبیات، عربی، علوم اجتماعی، تاریخ، جغرافیا، اقتصاد، منطق، زبان خارجی','مهارت نوشتن و بیان، تفکر انتقادی، مطالعه‌ی زیاد، توان گفت‌وگو',[['حقوق','قوانین، دادرسی و وکالت'],['علوم اجتماعی','مطالعه‌ی جامعه و مسائل آن'],['روانشناسی و علوم تربیتی','رفتار انسان، یادگیری و آموزش'],['اقتصاد، مدیریت و حسابداری','پول، سازمان و کسب‌وکار'],['زبان و ادبیات (فارسی و خارجی)','ادبیات، ترجمه و آموزش زبان'],['تاریخ و جغرافیا','شناخت گذشته و مکان‌ها'],['علوم سیاسی و روابط بین‌الملل','سیاست‌گذاری و روابط کشورها']],'وکیل، معلم، روان‌شناس، مدیر، مترجم، پژوهشگر اجتماعی، روزنامه‌نگار','تنوع زیاد مسیرهای شغلی و کاری','نیاز به مطالعه و نوشتن زیاد','کتاب‌های درسی، مطالعه‌ی آزاد، مناظره و نوشتن منظم'],
+['is','علوم و معارف اسلامی','شاخه‌ی نظری؛ مناسب علاقه‌مندان به متون دینی، زبان عربی و اندیشه‌ی اسلامی.','علوم قرآنی، فقه و اصول، عربی، منطق، فلسفه','تسلط بر عربی، تحلیل متن، صبر در مطالعه',[['الهیات و معارف اسلامی','مطالعه‌ی آموزه‌ها و اندیشه‌ی دینی'],['فقه و حقوق اسلامی','احکام و قوانین اسلامی'],['علوم قرآن و حدیث','تفسیر و شناخت متون دینی'],['فلسفه و کلام اسلامی','استدلال و مباحث نظری']],'مدرس، پژوهشگر دینی، مشاور و مبلغ، فعالیت در مراکز فرهنگی','هم‌افزایی با رشته‌های حقوق و علوم انسانی','دامنه‌ی شغلی خاص‌تر','کتاب‌های درسی، متون پایه‌ی عربی، مشورت با استادان'],
+['tv','فنی‌وحرفه‌ای و کاردانش','مسیر مهارت‌محور؛ مناسب کسانی که کار عملی را دوست دارند و می‌خواهند زودتر وارد بازار کار شوند.','دروس عمومی و دروس کارگاهی هر زمینه','مهارت دست‌ورزی، دقت، حل مسئله‌ی عملی',[['گروه صنعت (مانند برق، مکانیک، ساختمان)','کار با دستگاه‌ها و سیستم‌های فنی'],['گروه خدمات (مانند فناوری اطلاعات، خدمات اداری)','کار در حوزه‌ی خدمات و فناوری'],['گروه کشاورزی','تولید و فرآوری محصولات'],['کاردانش','مهارت‌های حرفه‌ای کاربردی با تمرکز بر کار عملی']],'تکنسین، هنرجوی ماهر، صاحب کارگاه، کارآفرین (امکان ادامه تحصیل بسته به مسیر و شرایط)','ورود سریع‌تر به بازار کار و مهارت عملی','فهرست دقیق زمینه‌ها و شرایط ادامه تحصیل ممکن است تغییر کند','سایت رسمی سازمان آموزش فنی‌وحرفه‌ای و مشاور مدرسه']
+];
+const CQ=[
+['در وقت آزاد بیشتر دوست داری…',['حل پازل و مسئله‌ی منطقی','خواندن درباره‌ی بدن انسان و طبیعت','نوشتن، خواندن داستان یا بحث درباره‌ی جامعه','ساختن یا تعمیر یک وسیله']],
+['کدام درس را راحت‌تر یاد می‌گیری؟',['ریاضی و فیزیک','زیست و شیمی','ادبیات، تاریخ و اجتماعی','کار عملی و کارگاهی']],
+['کدام پروژه برایت جذاب‌تر است؟',['طراحی یک برنامه یا ربات','بررسی اثر یک ماده بر سلامت','تهیه‌ی گزارش درباره‌ی یک مشکل اجتماعی','ساخت یک مدار یا مدل واقعی']],
+['وقتی با مشکل روبه‌رو می‌شوی…',['با محاسبه و منطق حلش می‌کنم','آزمایش و مشاهده می‌کنم','گفت‌وگو و درک دیگران کمک می‌کند','دست‌به‌کار می‌شوم و امتحان می‌کنم']],
+['آینده‌ات را بیشتر شبیه کدام می‌بینی؟',['مهندس یا پژوهشگر','پزشک، پرستار یا کار در آزمایشگاه','وکیل، معلم، روان‌شناس یا مدیر','تکنسین، صنعتگر یا کارآفرین']],
+['خواندن کدام جذاب‌تر است؟',['مقاله‌ای درباره‌ی فضا و فناوری','مستندی درباره‌ی بدن و بیماری‌ها','کتاب تاریخ یا روان‌شناسی','آموزش گام‌به‌گام ساخت یک چیز']],
+['در کار گروهی معمولاً…',['ایده‌ی فنی و راه‌حل می‌دهم','اندازه‌گیری و ثبت دقیق انجام می‌دهم','هماهنگی و مذاکره می‌کنم','کارها را عملی اجرا می‌کنم']],
+['تحمل کدام برایت آسان‌تر است؟',['محاسبات طولانی','یادگیری اصطلاحات زیاد','خواندن و نوشتن زیاد','کار عملی طولانی']],
+['بیشتر دوست داری به چه چیزی کمک کنی؟',['ساخت فناوری‌های جدید','سلامت مردم','آموزش و حقوق مردم','رفع نیازهای عملی مردم']],
+['در یک مسابقه شرکت می‌کنی؛ کدام را انتخاب می‌کنی؟',['ریاضی یا کامپیوتر','زیست یا شیمی','مناظره یا ادبیات','مسابقه‌ی مهارتی و ساخت']]
+];
+let CW=null;
+views.career=()=>CW?cwv():`<h2 style='margin-bottom:8px'>انتخاب رشته</h2><section class='card'><p>با یک کاربرگ ۱۰ سؤالی ببین علاقه‌هایت به کدام شاخه نزدیک‌تر است.</p>${S.cg?`<p class='m'>آخرین نتیجه: ${F4.map(k=>FD.find(f=>f[0]==k)[1].split(' ')[0]+' '+fa(S.cg.sc[k])).join(' · ')}</p>`:''}<button class='btn' style='margin-top:8px' onclick='CW={i:0,sc:{mp:0,ex:0,hu:0,tv:0}};render()'>شروع کاربرگ</button></section><p class='m' style='font-size:.8rem;margin-bottom:8px'>راهنمای عمومی و بدون تأیید رسمی: برای جزئیات و شرایط جاری به سایت وزارت آموزش‌وپرورش، سازمان سنجش آموزش کشور یا مشاور مدرسه مراجعه کن. نمره‌های تو به‌تنهایی آینده‌ات را تعیین نمی‌کنند.</p>${FD.map(f=>`<details class='card'><summary style='color:${FC[f[0]]}'>${f[1]}</summary><p>${f[2]}</p><p><b>زیررشته‌ها و مسیرها</b></p>${f[5].map(s=>`<p>• <b>${s[0]}</b> — ${s[1]}</p>`).join('')}<p><b>دروس اصلی:</b> ${f[3]}</p><p><b>مهارت‌های لازم:</b> ${f[4]}</p><p><b>مشاغل مرتبط:</b> ${f[6]}</p><p><b>مزیت‌ها:</b> ${f[7]}</p><p><b>چالش‌ها:</b> ${f[8]}</p><p><b>منابع پیشنهادی:</b> ${f[9]}</p></details>`).join('')}`;
+function cwv(){const bk=`<button class='btn2' onclick='CW=null;render()' style='margin-bottom:10px'>بازگشت به رشته‌ها</button>`;if(CW.i>=CQ.length){const t=F4.reduce((a,k)=>a+CW.sc[k],0)||1,mx=Math.max(...F4.map(k=>CW.sc[k])),top=F4.filter(k=>CW.sc[k]==mx).map(k=>FD.find(f=>f[0]==k)[1]);return bk+`<section class='card'><h3>نتیجه‌ی کاربرگ</h3>${F4.map(k=>`<p style='margin-top:8px'>${FD.find(f=>f[0]==k)[1]} · ${fa(Math.round(CW.sc[k]/t*100))}٪</p><div class='fb' style='width:${CW.sc[k]/t*100}%;background:${FC[k]}'></div>`).join('')}<p style='margin-top:12px'>بیشترین هم‌خوانی پاسخ‌های امروز تو با: <b>${top.join(' و ')}</b></p><p class='m'>این فقط یک راهنمای کلی بر پایه‌ی علاقه‌هایی است که اعلام کردی. تصمیم نهایی را با بررسی بیشتر و گفت‌وگو با خانواده و مشاور بگیر.</p><button class='btn' onclick='CW={i:0,sc:{mp:0,ex:0,hu:0,tv:0}};render()'>دوباره</button></section>`}const q=CQ[CW.i];if(!CW.o)CW.o=[0,1,2,3].sort(()=>Math.random()-.5);return bk+`<section class='card'><b>سؤال ${fa(CW.i+1)} از ${fa(CQ.length)}</b><p style='margin:10px 0'>${q[0]}</p>${CW.o.map(j=>`<button class='btn2' style='width:100%;margin-bottom:8px;text-align:start' onclick='cwa(${j})'>${q[1][j]}</button>`).join('')}</section>`}
+function cwa(j){CW.sc[F4[j]]++;CW.i++;CW.o=null;if(CW.i>=CQ.length){S.cg={sc:CW.sc,t:Date.now()};save()}render()}
+/* notes */
+let NE=null,NQ='',ND={tool:'pen',has:false};
+const NT=()=>S.notes||(S.notes=[]),nowL=()=>{const d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,16)},fdt=s=>new Date(s).toLocaleString(LC(),{dateStyle:'medium',timeStyle:'short'});
+views.notes=()=>NE?`<button class='btn2' onclick='NE=null;render()' style='margin-bottom:10px'>بازگشت به یادداشت‌ها</button><section class='card'><input id='nt' maxlength='80' placeholder='عنوان'><label>تاریخ و ساعت</label><input id='nd' type='datetime-local'><textarea id='nx' rows='3' placeholder='متن یادداشت'></textarea><div class='row'><input id='nc2' type='color' value='#8b5cf6' style='padding:2px;height:42px' oninput="ND.tool='pen'"><input id='nw' type='range' min='1' max='24' value='4'></div><div class='row'><button class='btn2' onclick="ND.tool='pen'">قلم</button><button class='btn2' onclick="ND.tool='er'">پاک‌کن</button><button class='btn2' onclick='ncl()'>پاک‌کردن بوم</button><label style='display:block;width:100%'>عکس از گالری</label><input type='file' accept='image/*' onchange='nimg(this)'></div><canvas id='nc' width='640' height='420' style='width:100%;max-width:none;aspect-ratio:640/420;background:#fff'></canvas><button class='btn' style='width:100%' onclick='nsv()'>ذخیره</button></section>`:`<h2 style='margin-bottom:10px'>یادداشت</h2><div class='row'><button class='btn' onclick="NE='new';render()">یادداشت جدید</button><input id='ns' placeholder='جستجو' value='${esc(NQ)}' oninput='NQ=this.value;nl()'></div><div id='nl' style='margin-top:10px'></div>`;
+function nl(){const q=NQ.trim(),a=NT().filter(n=>!q||(n.t+' '+n.x).includes(q)).sort((a,b)=>b.pin-a.pin||b.dt.localeCompare(a.dt));$('#nl').innerHTML=a.length?a.map(n=>`<div class='card'><div class='row' style='align-items:flex-start'><div style='flex:3'><b>${esc(n.t)}</b><br><small class='m'>${fdt(n.dt)}</small></div><div style='flex:none;display:flex'><button class='ib' style='${n.pin?'color:var(--a)':''}' onclick='npn(${n.id})'>${ic('pin',18)}</button><button class='ib' onclick='NE=${n.id};render()'>${ic('edit',18)}</button><button class='ib' onclick='ndl(${n.id},this)'>${ic('trash',18)}</button></div></div>${n.x?`<p>${esc(n.x)}</p>`:''}${n.dr?`<img src='${n.dr}' style='width:100%;border-radius:12px;margin-top:8px'>`:''}</div>`).join(''):`<p class='card c m'>یادداشتی پیدا نشد.</p>`}
+after.notes=()=>{if(!NE)return nl();const cv=$('#nc'),x=cv.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,640,420);ND={tool:'pen',has:false};const n=NE=='new'?null:NT().find(z=>z.id==NE);$('#nd').value=n?n.dt:nowL();if(n){$('#nt').value=n.t;$('#nx').value=n.x||'';if(n.dr){const im=new Image();im.onload=()=>{x.drawImage(im,0,0,640,420);ND.has=true};im.src=n.dr}}
+let dn=0,lx,ly;const pt=e=>{const r=cv.getBoundingClientRect();return[(e.clientX-r.left)*640/r.width,(e.clientY-r.top)*420/r.height]};
+function dr(e){const[p,q]=pt(e),w=+$('#nw').value;x.lineCap=x.lineJoin='round';x.lineWidth=ND.tool=='er'?w*3:w;x.strokeStyle=ND.tool=='er'?'#fff':$('#nc2').value;x.beginPath();x.moveTo(lx,ly);x.lineTo(p+.01,q);x.stroke();lx=p;ly=q}
+cv.onpointerdown=e=>{e.preventDefault();cv.setPointerCapture(e.pointerId);dn=1;[lx,ly]=pt(e);ND.has=true;dr(e)};cv.onpointermove=e=>{if(dn)dr(e)};cv.onpointerup=cv.onpointercancel=()=>{dn=0}};
+function ncl(){const c=$('#nc').getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,640,420);ND.has=false}
+async function nimg(i){const f=i.files&&i.files[0];if(!f)return;if(f.size>15e6)return toast('حجم تصویر زیاد است');try{const im=await ldi(f);const x=$('#nc').getContext('2d'),k=Math.min(640/im.width,420/im.height),w=im.width*k,h=im.height*k;x.drawImage(im,(640-w)/2,(420-h)/2,w,h);ND.has=true;toast('تصویر روی بوم قرار گرفت؛ می‌توانی رویش نقاشی کنی')}catch(e){toast('این تصویر خوانده نشد؛ JPG یا PNG را امتحان کن')}}
+function nsv(){const t=$('#nt').value.trim()||'بدون عنوان',x=$('#nx').value.trim(),dt=$('#nd').value||nowL(),dr=ND.has?$('#nc').toDataURL('image/jpeg',.72):'';if(!x&&!ND.has&&t=='بدون عنوان')return toast('چیزی برای ذخیره نیست');const a=NT();if(NE=='new')a.push({id:Date.now(),t,x,dt,dr,pin:false});else Object.assign(a.find(z=>z.id==NE),{t,x,dt,dr});save();NE=null;render();toast('ذخیره شد')}
+const npn=i=>{const n=NT().find(z=>z.id==i);n.pin=!n.pin;save();nl()};
+function ndl(i,b){if(!b.dataset.c){b.dataset.c=1;b.style.color='#ef4444';toast('برای حذف، دوباره بزن');return}S.notes=NT().filter(z=>z.id!=i);save();nl()}
+async function ldi(f){try{if(window.createImageBitmap)return await createImageBitmap(f)}catch(e){}const u=await new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=no;r.readAsDataURL(f)});return await new Promise((ok,no)=>{const x=new Image();x.onload=()=>ok(x);x.onerror=no;x.src=u})}
+/* daily quote */
+const DQ=[['وَقُلْ رَبِّ زِدْنِي عِلْمًا','«و بگو: پروردگارا، دانشم را بیفزای.»','قرآن کریم، سوره‌ی طه، آیه‌ی ۱۱۴'],['هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ','«آیا کسانی که می‌دانند با کسانی که نمی‌دانند برابرند؟»','قرآن کریم، سوره‌ی زمر، آیه‌ی ۹'],['يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ','«خدا کسانی از شما را که ایمان آورده‌اند و کسانی را که دانش یافته‌اند، به درجاتی بالا می‌برد.»','قرآن کریم، سوره‌ی مجادله، آیه‌ی ۱۱'],['اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ','«بخوان به نام پروردگارت که آفرید.»','قرآن کریم، سوره‌ی علق، آیه‌ی ۱'],['طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ','«طلب دانش بر هر مسلمانی واجب است.»','حدیث نبوی، منقول در کافی'],['اَلْعِلْمُ خَيْرٌ مِنَ الْمَالِ، اَلْعِلْمُ يَحْرُسُكَ وَأَنْتَ تَحْرُسُ الْمَالَ','«دانش از دارایی بهتر است؛ دانش از تو مراقبت می‌کند و تو از دارایی مراقبت می‌کنی.»','امام علی (ع)، نهج‌البلاغه، حکمت ۱۴۷'],['قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ','«ارزش هر کس به اندازه‌ی چیزی است که نیکو می‌داند.»','امام علی (ع)، نهج‌البلاغه، حکمت ۸۱']];
+function dq(){const ix=Math.floor((Date.now()-new Date().getTimezoneOffset()*6e4)/864e5)%DQ.length,q=DQ[ix],x=EN()?DQE[ix]:AR()?DQA[ix]:null;return`<section class="card c" style="border-color:var(--a)"><small class="m">پیام امروز</small><p style="font-family:'Noto Naskh Arabic',serif;font-size:1.3rem;line-height:2.1;margin:4px 0">${q[0]}</p><p ${x?'hidden':''}>${q[1]}</p>${x?(EN()?`<p>${x[0]}</p><small class="m">${x[1]}</small>`:`<small class="m">${x}</small>`):''}<small class="m"${x?' hidden':''}>${q[2]} · ترجمه‌ی آزاد</small></section>`}
+/* avatar crop */
+let AE=null;
+async function upl2(i){const f=i.files&&i.files[0];if(!f)return;if(f.size>15e6)return toast('حجم تصویر زیاد است (حداکثر ۱۵ مگابایت)');try{AE={im:await ldi(f),x:0,y:0,z:1};aer()}catch(e){toast('این تصویر خوانده نشد؛ JPG یا PNG را امتحان کن')}}
+function aed(){const c=$('#ac');if(!c||!AE)return;const x=c.getContext('2d'),a=AE,im=a.im,k=Math.max(220/im.width,220/im.height)*a.z,w=im.width*k,h=im.height*k,mx=(w-220)/2,my=(h-220)/2;a.x=Math.max(-mx,Math.min(mx,a.x));a.y=Math.max(-my,Math.min(my,a.y));x.fillStyle='#fff';x.fillRect(0,0,220,220);x.drawImage(im,(220-w)/2+a.x,(220-h)/2+a.y,w,h)}
+function aer(){$('#ae').innerHTML=`<p class="m" style="margin-top:8px">عکس را بکش تا جابه‌جا شود و با نوار، نزدیک یا دور کن.</p><canvas id="ac" width="220" height="220" style="width:220px;border-radius:50%;margin:6px auto;display:block;touch-action:none;cursor:grab"></canvas><input type="range" id="az" min="1" max="4" step=".05" value="1" oninput="AE.z=+this.value;aed()"><button class="btn" style="width:100%" onclick="aok()">تأیید عکس</button>`;const c=$('#ac');let d=0,px,py;c.onpointerdown=e=>{d=1;px=e.clientX;py=e.clientY;c.setPointerCapture(e.pointerId)};c.onpointermove=e=>{if(!d)return;const r=c.getBoundingClientRect();AE.x+=(e.clientX-px)*220/r.width;AE.y+=(e.clientY-py)*220/r.height;px=e.clientX;py=e.clientY;aed()};c.onpointerup=c.onpointercancel=()=>{d=0};aed()}
+function aok(){const o=document.createElement('canvas');o.width=o.height=160;o.getContext('2d').drawImage($('#ac'),0,0,160,160);PA=o.toDataURL('image/jpeg',.85);$('#ae').innerHTML='';avp();toast('عکس انتخاب شد')}
+/* focus, sound, pomodoro */
+const SND={k:'',a:null,n:null};
+function snd(k){SND.k=k;const sl=document.querySelector('select[onchange^=snd]');if(sl)sl.value=k;if(SND.n){try{SND.n.stop()}catch(e){}SND.n=null}if(!k)return;try{const a=SND.a||(SND.a=new(window.AudioContext||window.webkitAudioContext)());if(a.state=='suspended')a.resume();const len=a.sampleRate*3,b=a.createBuffer(1,len,a.sampleRate),d=b.getChannelData(0);let l=0;for(let i=0;i<len;i++){const w=Math.random()*2-1;if(k=='brown'){l=(l+.02*w)/1.02;d[i]=l*3.5}else d[i]=w*.5}const s=a.createBufferSource();s.buffer=b;s.loop=true;const g=a.createGain();g.gain.value=k=='rain'?.6:.25;let n=s;if(k=='rain'){const f=a.createBiquadFilter();f.type='bandpass';f.frequency.value=1800;f.Q.value=.5;s.connect(f);n=f}n.connect(g);g.connect(a.destination);s.start();SND.n=s}catch(e){toast('پخش صدا در این مرورگر ممکن نیست')}}
+function exf(){document.body.classList.remove('foc');const e=$('#fx');if(e)e.remove()}
+function foc(){if(document.body.classList.contains('foc'))return exf();document.body.classList.add('foc');const b=document.createElement('button');b.id='fx';b.className='btn2';b.textContent='خروج از حالت تمرکز';b.style.cssText='position:fixed;top:calc(12px + env(safe-area-inset-top,0px));inset-inline-end:12px;z-index:60';b.onclick=exf;document.body.appendChild(b)}
+function pomo(){if(T.st!='idle')return toast('اول جلسه‌ی جاری را تمام یا بازنشانی کن');if(V!='study')return go('study');T.pm=1;T.brk=0;T.bd=0;$('#dv').value=25;$('#du').value=60;tStart();toast('پومودورو شروع شد: '+fa(25)+' دقیقه تمرکز')}
+function brk(){if(T.st!='idle')return;T.brk=1;$('#dv').value=(T.pc||0)%4?5:15;$('#du').value=60;tStart()}
+/* calendar + reminders */
+let CD=null,CM=null;
+function calv(){const n=new Date();if(!CM)CM={y:n.getFullYear(),m:n.getMonth()};const f=new Date(CM.y,CM.m,1),off=(f.getDay()+1)%7,dim=new Date(CM.y,CM.m+1,0).getDate(),en=EN(),cnt={},sel=CD||iso(n);S.tasks.forEach(t=>{cnt[t.d]=(cnt[t.d]||0)+1});let c=(en?['Sa','Su','Mo','Tu','We','Th','Fr']:AR()?['س','ح','ن','ث','ر','خ','ج']:['ش','ی','د','س','چ','پ','ج']).map(d=>`<small class='m'>${d}</small>`).join('')+'<i></i>'.repeat(off);for(let d=1;d<=dim;d++){const k=iso(new Date(CM.y,CM.m,d));c+=`<button class='cd ${k==sel?'on':''} ${k==iso(n)?'td':''}' data-k='${k}' onclick='cdp(this.dataset.k)'>${fa(d)}${cnt[k]?'<b></b>':''}</button>`}return`<section class='card'><div class='row' style='margin-bottom:8px'><button class='btn2' style='flex:none' onclick='cmv(-1)'>قبلی</button><b class='c'>${f.toLocaleDateString(LC()+'-u-ca-gregory',{month:'long',year:'numeric'})}</b><button class='btn2' style='flex:none' onclick='cmv(1)'>بعدی</button></div><div class='cg'>${c}</div></section>`}
+function cmv(d){CM.m+=d;if(CM.m<0){CM.m=11;CM.y--}if(CM.m>11){CM.m=0;CM.y++}render()}
+function cdp(k){CD=k;render()}
+const NF=new Set();
+function rem(){if(!S.set.notif||!S.user)return;const n=Date.now();S.tasks.forEach(t=>{if(t.done||!t.s)return;const df=new Date(t.d+'T'+t.s).getTime()-n;if(df>0&&df<=(S.set.rm||10)*6e4&&!NF.has(t.id)){NF.add(t.id);const m=`«${t.t}» ${fa(Math.ceil(df/6e4))} دقیقه‌ی دیگر شروع می‌شود`;toast(m);beep();try{if(window.Notification&&Notification.permission=='granted'&&document.hidden)new Notification('همزی',{body:m})}catch(e){}}})}
+setInterval(rem,30000);
+/* more experiments */
+EX.push(['proj','حرکت پرتابی','فیزیک',9,'زاویه و سرعت پرتاب را تغییر بده'],['pen','آونگ ساده','فیزیک',9,'اثر طول، گرانش و جرم را ببین'],['tit','تیتراسیون مجازی','شیمی',10,'نقطه‌ی پایان را با نشانگر رنگی پیدا کن'],['hrt','ضربان قلب و ورزش','زیست',7,'ببین بدن هنگام فعالیت چه می‌کند']);
+Object.assign(QZ,{proj:[['در غیاب مقاومت هوا، با کدام زاویه برد بیشینه است؟',['۳۰ درجه','۴۵ درجه','۶۰ درجه'],1,'برای یک سرعت مشخص، برد در زاویه‌ی ۴۵ درجه بیشینه است.'],['روی ماه با همان سرعت و زاویه، برد چه می‌شود؟',['بیشتر','کمتر','برابر'],0,'گرانش ماه کمتر است و پرتابه مدت بیشتری در هوا می‌ماند.'],['اگر سرعت اولیه دو برابر شود، برد چند برابر می‌شود؟',['۲','۴','۸'],1,'برد با مربع سرعت متناسب است.',1]],pen:[['جرم وزنه روی دوره‌ی آونگ ساده چه اثری دارد؟',['جرم بیشتر یعنی دوره بیشتر','هیچ اثری','جرم بیشتر یعنی دوره کمتر'],1,'دوره‌ی آونگ ساده به جرم وابسته نیست.'],['اگر طول نخ بیشتر شود، دوره…',['بیشتر می‌شود','کمتر می‌شود','ثابت می‌ماند'],0,'دوره با ریشه‌ی طول متناسب است.'],['دوره‌ی آونگ با کدام کمیت متناسب است؟',['خود طول','ریشه‌ی طول','مربع طول'],1,'T = 2π√(L/g)',1]],tit:[['در نقطه‌ی هم‌ارزی اسید قوی و باز قوی، pH تقریباً چند است؟',['۱','۷','۱۳'],1,'محلول خنثی است و pH حدود ۷ می‌شود.'],['نشانگر در محلول بازی (در این شبیه‌سازی) چه می‌کند؟',['بی‌رنگ می‌ماند','صورتی می‌شود','زرد می‌شود'],1,'نشانگر از حدود pH ۸٫۲ به بالا صورتی می‌شود.'],['چرا نزدیک نقطه‌ی هم‌ارزی قطره‌های کوچک‌تر می‌افزاییم؟',['pH آنجا بسیار سریع تغییر می‌کند','برای صرفه‌جویی','رنگ تغییر نمی‌کند'],0,'در اطراف هم‌ارزی، یک قطره هم می‌تواند pH را خیلی تغییر دهد.',1]],hrt:[['هنگام ورزش ضربان قلب چه می‌شود؟',['بیشتر','کمتر','ثابت'],0,'قلب باید خون بیشتری به عضلات برساند.'],['چرا تنفس سریع‌تر می‌شود؟',['عضلات اکسیژن بیشتری لازم دارند','هوا سردتر شده','معده خالی است'],0,'عضلات برای تولید انرژی اکسیژن بیشتری مصرف می‌کنند.'],['کدام مورد می‌تواند نشانگر آمادگی قلبی‌تنفسی باشد؟',['ضربان قلب در استراحت','رنگ پوست','تعداد دندان‌ها'],0,'به‌طور کلی ضربان استراحت پایین‌تر نشانه‌ی آمادگی بهتر است (این تشخیص پزشکی نیست).',1]]});
+/* projectile */
+function prI(){LB.p={a:45,v:20,g:9.8,tr:[],l:null,sc:1};$('#lb').innerHTML=`<h3>حرکت پرتابی</h3><p>هدف: ببین زاویه، سرعت و گرانش چگونه مسیر پرتاب را تغییر می‌دهند (از مقاومت هوا صرف‌نظر شده).</p><label>زاویه: <b id='pa'>${fa(45)}</b>°</label><input type='range' min='5' max='85' value='45' oninput='LB.p.a=+this.value;$("#pa").textContent=fa(this.value)'><label>سرعت اولیه: <b id='pv'>${fa(20)}</b> m/s</label><input type='range' min='5' max='30' value='20' oninput='LB.p.v=+this.value;$("#pv").textContent=fa(this.value)'><label>گرانش</label><select onchange='LB.p.g=+this.value'><option value='9.8'>زمین (${fp(9.8)})</option><option value='1.6'>ماه (${fp(1.6)})</option><option value='3.7'>مریخ (${fp(3.7)})</option></select><div class='row' style='margin:8px 0'><button class='btn' onclick='prF()'>پرتاب</button><button class='btn2' onclick='LB.p.tr=[];LB.p.l=null;prD()'>پاک‌کردن مسیرها</button></div><div id='cs'></div>`;prD()}
+function prD(){const p=LB.p,cols=['#60a5fa','#f472b6','#facc15','#34d399','#a78bfa'],calc=o=>{const r=o.a*Math.PI/180;return{R:o.v*o.v*Math.sin(2*r)/o.g,H:Math.pow(o.v*Math.sin(r),2)/(2*o.g),T:2*o.v*Math.sin(r)/o.g}};let mR=1,mH=1;p.tr.forEach(o=>{const c=calc(o);mR=Math.max(mR,c.R);mH=Math.max(mH,c.H)});const sc=p.sc=Math.min(270/mR,120/mH),pts=o=>{const r=o.a*Math.PI/180,c=calc(o);return[...Array(41)].map((_,i)=>{const t=c.T*i/40;return`${15+o.v*Math.cos(r)*t*sc},${150-(o.v*Math.sin(r)*t-.5*o.g*t*t)*sc}`}).join(' ')},l=p.l?calc(p.l):null;$('#cs').innerHTML=`<svg viewBox='0 0 300 160' style='width:100%;background:linear-gradient(#0b1b3a,#1b2a55);border-radius:14px'><rect x='0' y='150' width='300' height='10' fill='#3f6b3a'/>${p.tr.map((o,i)=>`<polyline points='${pts(o)}' fill='none' stroke='${cols[i%5]}' stroke-width='2' stroke-dasharray='4 3'/>`).join('')}<circle id='bl' cx='15' cy='150' r='5' fill='#fff'/></svg>${l?`<p>برد: ${fp(l.R.toFixed(1))} m · بیشینه ارتفاع: ${fp(l.H.toFixed(1))} m · زمان پرواز: ${fp(l.T.toFixed(1))} s</p>`:`<p class='m'>دکمه‌ی پرتاب را بزن.</p>`}<p class='m'>در غیاب مقاومت هوا، برای یک سرعت مشخص بیشترین برد در زاویه‌ی ۴۵ درجه است.</p>`}
+function prF(){const p=LB.p;p.tr.push({a:p.a,v:p.v,g:p.g});if(p.tr.length>5)p.tr.shift();p.l=p.tr[p.tr.length-1];prD();const o=p.l,r=o.a*Math.PI/180,T=2*o.v*Math.sin(r)/o.g,t0=performance.now(),dur=Math.min(4,Math.max(1.2,T/2))*1000;cancelAnimationFrame(LB.raf);const st=t=>{const b=$('#bl');if(!b||LB.ex!='proj')return;const k=Math.min(1,(t-t0)/dur),tt=T*k;b.setAttribute('cx',15+o.v*Math.cos(r)*tt*p.sc);b.setAttribute('cy',150-(o.v*Math.sin(r)*tt-.5*o.g*tt*tt)*p.sc);if(k<1)LB.raf=requestAnimationFrame(st)};LB.raf=requestAnimationFrame(st)}
+/* pendulum */
+function peI(){LB.q={L:1,g:9.8,a:30,m:1,th:30*Math.PI/180,w:0,run:0,last:0,zc:0,per:0};$('#lb').innerHTML=`<h3>آونگ ساده</h3><p>هدف: ببین دوره‌ی نوسان به چه چیزهایی بستگی دارد.</p><label>طول نخ: <b id='ql'>${fp(1)}</b> m</label><input type='range' min='0.2' max='2' step='0.1' value='1' oninput='LB.q.L=+this.value;$("#ql").textContent=fp(this.value);peD()'><label>جرم وزنه: <b id='qm'>${fa(1)}</b> kg</label><input type='range' min='1' max='5' value='1' oninput='LB.q.m=+this.value;$("#qm").textContent=fa(this.value);peD()'><label>زاویه‌ی شروع: <b id='qa'>${fa(30)}</b>°</label><input type='range' min='5' max='45' value='30' oninput='LB.q.a=+this.value;$("#qa").textContent=fa(this.value);if(!LB.q.run){LB.q.th=this.value*Math.PI/180;peP()}'><label>گرانش</label><select onchange='LB.q.g=+this.value;peD()'><option value='9.8'>زمین</option><option value='1.6'>ماه</option><option value='3.7'>مریخ</option></select><div class='row' style='margin:8px 0'><button class='btn' onclick='peG()'>رها کن / توقف</button></div><div id='cs'></div>`;peD()}
+function peD(){const q=LB.q,s=70,T=2*Math.PI*Math.sqrt(q.L/q.g);$('#cs').innerHTML=`<svg viewBox='0 0 300 190' style='width:100%;max-width:340px;display:block;margin:auto;background:linear-gradient(#0b1b3a,#1b2a55);border-radius:14px'><rect x='100' y='10' width='100' height='8' rx='3' fill='#94a3b8'/><line id='prd' x1='150' y1='18' x2='150' y2='${18+q.L*s}' stroke='#e2e8f0' stroke-width='2'/><circle id='pbb' cx='150' cy='${18+q.L*s}' r='${8+q.m*2.5}' fill='#f59e0b' stroke='#fff'/></svg><p>دوره‌ی نظری: T = 2π√(L/g) = <b>${fp(T.toFixed(2))}</b> s</p><p id='pm' class='m'></p><p class='m'>جرم وزنه روی دوره اثری ندارد؛ طول و گرانش اثر دارند.</p>`;peP()}
+function peP(){const q=LB.q,s=70,x=150+Math.sin(q.th)*q.L*s,y=18+Math.cos(q.th)*q.L*s,b=$('#pbb'),r=$('#prd');if(!b||!r)return;b.setAttribute('cx',x);b.setAttribute('cy',y);r.setAttribute('x2',x);r.setAttribute('y2',y)}
+function peG(){const q=LB.q;q.run=!q.run;if(!q.run)return;q.last=0;q.zc=0;q.w=0;q.per=0;const st=t=>{if(LB.ex!='pen'||!q.run||!$('#pbb'))return;if(q.last){const dt=Math.min(.03,(t-q.last)/1000);for(let i=0;i<5;i++){const h=dt/5,pt=q.th;q.w+=-(q.g/q.L)*Math.sin(q.th)*h;q.th+=q.w*h;if(pt<0&&q.th>=0){const n=t/1000;if(q.zc)q.per=n-q.zc;q.zc=n}}}q.last=t;peP();if(q.per&&$('#pm'))$('#pm').textContent='دوره‌ی اندازه‌گیری‌شده: '+fp(q.per.toFixed(2))+' s';LB.raf=requestAnimationFrame(st)};cancelAnimationFrame(LB.raf);LB.raf=requestAnimationFrame(st)}
+/* titration */
+const tpH=v=>{const nh=.002,no=.1*v/1000,V=(20+v)/1000,d=nh-no;if(Math.abs(d)<1e-9)return 7;return d>0?-Math.log10(d/V):14+Math.log10(-d/V)};
+function tiI(){LB.t={v:0,pts:[[0,1]]};tiR()}
+function tiA(x){const t=LB.t;if(t.v>=40)return toast('بشر پر شد');t.v=Math.round((t.v+x)*10)/10;t.pts.push([t.v,tpH(t.v)]);tiR()}
+function tiR(){const t=LB.t,p=tpH(t.v),c=p<8.2?'rgba(190,215,255,.3)':p>=10?'rgba(236,72,153,.85)':`rgba(236,72,153,${(.3+(p-8.2)/1.8*.55).toFixed(2)})`,ly=110-t.v*.6,pts=t.pts.map(q=>`${30+q[0]/40*260},${150-q[1]/14*140}`).join(' ');$('#lb').innerHTML=`<h3>تیتراسیون مجازی</h3><p>هدف: به ۲۰ میلی‌لیتر اسید رقیق (همراه نشانگر) کم‌کم باز رقیق اضافه کن تا نقطه‌ی پایان را پیدا کنی. غلظت هر دو ۰٫۱ مول بر لیتر فرض شده است.</p><svg viewBox='0 0 280 190' style='width:100%;max-width:240px;display:block;margin:auto' class='gl'><defs><clipPath id='fk'><path d='M120 20h40v50l45 90a10 10 0 0 1-9 14H84a10 10 0 0 1-9-14l45-90z'/></clipPath></defs><g clip-path='url(#fk)'><rect x='60' y='${ly}' width='160' height='100' fill='${c}'/></g><path d='M120 20h40v50l45 90a10 10 0 0 1-9 14H84a10 10 0 0 1-9-14l45-90z' fill='none' stroke='#cfe3ff' stroke-width='3'/></svg><div class='row'><button class='btn2' onclick='tiA(1)'>+${fa(1)} mL</button><button class='btn2' onclick='tiA(.1)'>+${fp(0.1)} mL</button><button class='btn2' onclick='tiI()'>شروع دوباره</button></div><p>حجم باز: <b>${fp(t.v.toFixed(1))}</b> mL · pH ≈ <b>${fp(p.toFixed(1))}</b></p><p>${p>=8.2?'نشانگر صورتی شد؛ از نقطه‌ی هم‌ارزی گذشته‌ای.':t.v>=18&&t.v<=21?'نزدیک نقطه‌ی هم‌ارزی هستی؛ قطره‌های کوچک‌تر بیفزا.':'نشانگر هنوز بی‌رنگ است.'}</p><svg viewBox='0 0 300 160' style='width:100%'><line x1='30' y1='150' x2='290' y2='150' stroke='#64748b'/><line x1='30' y1='10' x2='30' y2='150' stroke='#64748b'/><line x1='160' y1='10' x2='160' y2='150' stroke='#94a3b8' stroke-dasharray='4 4'/><polyline points='${pts}' fill='none' stroke='#38bdf8' stroke-width='2'/><text x='34' y='22' fill='#aab4d6' font-size='10'>pH</text><text x='250' y='146' fill='#aab4d6' font-size='10'>mL</text></svg><p class='m'>منحنی pH بر حسب حجم باز؛ خط‌چین، نقطه‌ی هم‌ارزی (۲۰ mL).</p>`}
+/* heart */
+const HA=[['استراحت',70,16],['راه‌رفتن',100,20],['دویدن آرام',140,28],['دویدن سریع',170,38]];
+function hrI(){LB.h=0;hrR()}
+function hrR(){const a=HA[LB.h];$('#lb').innerHTML=`<h3>ضربان قلب و ورزش</h3><p>هدف: ببین قلب و تنفس هنگام فعالیت‌های مختلف چه تغییری می‌کنند (مقادیر تقریبی و برای یادگیری کلی).</p><div class='sh'>${HA.map((x,i)=>`<button class='btn2 ${i==LB.h?'ok':''}' onclick='LB.h=${i};hrR()'>${x[0]}</button>`).join('')}</div><svg viewBox='0 0 200 110' style='width:100%;max-width:340px;display:block;margin:auto'><g style='transform-origin:50px 55px;animation:hb ${(60/a[1]).toFixed(2)}s infinite'><path d='M50 88C10 60 5 30 28 22C40 18 48 24 50 32C52 24 60 18 72 22C95 30 90 60 50 88Z' fill='#ef4444' transform='translate(0 -8)'/></g><g style='transform-origin:150px 55px;animation:br ${(60/a[2]).toFixed(2)}s infinite'><ellipse cx='132' cy='55' rx='16' ry='30' fill='#f9a8d4'/><ellipse cx='168' cy='55' rx='16' ry='30' fill='#f9a8d4'/></g></svg><p>ضربان قلب: <b>${fa(a[1])}</b> بار در دقیقه · تنفس: <b>${fa(a[2])}</b> بار در دقیقه</p><p class='m'>هنگام فعالیت، عضلات انرژی و اکسیژن بیشتری لازم دارند؛ قلب سریع‌تر خون را پمپ می‌کند و تنفس تندتر می‌شود.</p>`}
+/* i18n */
+function EN(){return !!(S&&S.set&&S.set.lang=='en')}
+function nz(s){return s.replace(/\u200c/g,'')}
+function setLang(l){S.set.lang=l;save();apply();render();dw(1)}
+const D={};`
+همزی=Hamzi
+همزی؛ همراه هوشمند مسیر یادگیری تو=Hamzi: your smart learning companion
+خوش آمدی، آماده‌ی یادگیری هستی؟=Welcome! Ready to learn?
+ساخت حسن محمدی=Built by Hassan Mohammadi
+داشبورد=Dashboard
+ثبت‌نام دانش‌آموز=Student registration
+نام=First name
+نام خانوادگی=Last name
+پایه‌ی تحصیلی=School grade
+سطح تحصیلی=Academic level
+هدف مطالعه‌ی روزانه (دقیقه)=Daily study goal (minutes)
+تصویر پروفایل=Profile picture
+شروع یادگیری=Start learning
+آپلود عکس از گالری=Upload a photo from gallery
+عکس را بکش تا جابه‌جا شود و با نوار، نزدیک یا دور کن.=Drag the photo to move it and use the slider to zoom.
+تأیید عکس=Confirm photo
+عکس انتخاب شد=Photo selected
+اول=1st
+دوم=2nd
+سوم=3rd
+چهارم=4th
+پنجم=5th
+ششم=6th
+هفتم=7th
+هشتم=8th
+نهم=9th
+دهم=10th
+یازدهم=11th
+دوازدهم=12th
+نیاز به تقویت=Needs improvement
+متوسط=Medium
+خوب=Good
+عالی=Excellent
+نام و نام خانوادگی را (حداقل # حرف) وارد کن=Enter first and last name (at least # letters)
+هدف مطالعه را بین # تا # دقیقه وارد کن=Enter a study goal between # and # minutes
+هدف امروز: # دقیقه مطالعه=Today's goal: # minutes of study
+هر جلسه‌ی کوتاه، یک قدم به هدفت نزدیک‌تری.=Every short session brings you one step closer to your goal.
+ثبات از شدت مهم‌تر است؛ امروز هم کمی مطالعه کن.=Consistency matters more than intensity; study a little today too.
+بعد از هر جلسه کمی استراحت کن تا تمرکزت برگردد.=Rest a little after each session to refocus.
+اتاق مطالعه=Study Room
+تایمر و جلسه‌های تمرکز=Timer and focus sessions
+میانگین مطالعه=Study Analytics
+آمار و پیشنهادها=Stats and suggestions
+آزمایشگاه=Lab
+آزمایش‌های مجازی و امن=Safe virtual experiments
+انتخاب رشته=Career Guidance
+معرفی رشته‌ها و کاربرگ سنجش=Fields overview and fit worksheet
+یادداشت=Notes
+نوشتن، نقاشی و عکس=Write, draw and add photos
+برنامه‌ریزی=Planner
+کارها، ساعت و اولویت=Tasks, times and priorities
+پیام امروز=Message of the day
+شروع=Start
+توقف=Pause
+ادامه=Resume
+بازنشانی=Reset
+ثانیه=Seconds
+دقیقه=Minutes
+ساعت=Hours
+بدون صدا=No sound
+باران=Rain
+نویز سفید=White noise
+نویز قهوه‌ای=Brown noise
+حالت تمرکز=Focus mode
+خروج از حالت تمرکز=Exit focus mode
+پومودورو (# دقیقه تمرکز + # دقیقه استراحت)=Pomodoro (# min focus + # min break)
+استراحت # دقیقه‌ای=# minute break
+استراحت تمام شد=Break is over
+شروع دور بعدی تمرکز=Start next focus round
+یک بازی کوتاه برای استراحت؟ زمان بازی محدود است.=A short game for a break? Play time is limited.
+بازی‌های کوتاه=Short games
+# دقیقه مطالعه ثبت شد.=# minutes of study logged.
+جلسه‌ی مطالعه تمام شد=Study session finished
+مدت را بین # ثانیه و # ساعت وارد کن=Enter a duration between # second and # hours
+اول جلسه‌ی جاری را تمام یا بازنشانی کن=Finish or reset the current session first
+پخش صدا در این مرورگر ممکن نیست=Sound playback isn't available in this browser
+کل مطالعه=Total study
+تعداد جلسه‌ها=Sessions
+میانگین جلسه=Avg. session
+پیاپی (روز)=Streak (days)
+این هفته=This week
+# روز اخیر=Last # days
+امروز=Today
+پایداری # روز=# -day consistency
+# دقیقه=# min
+#٪=#%
+# روز اخیر (دقیقه)=Last # days (minutes)
+نقشه‌ی فعالیت # روز=# -day activity map
+پیشنهادها=Suggestions
+هنوز جلسه‌ای ثبت نشده. با یک جلسه‌ی کوتاه شروع کن تا پیشنهادها از روی داده‌های خودت ساخته شوند.=No sessions logged yet. Start with a short session so suggestions are built from your own data.
+مطالعه‌ی این هفته‌ات از هفته‌ی قبل بیشتر بوده است.=You studied more this week than last week.
+این هفته کمتر از هفته‌ی قبل مطالعه کرده‌ای.=You studied less this week than last week.
+این هفته # دقیقه مطالعه کرده‌ای؛ هدف هفتگی تو # دقیقه است.=You studied # minutes this week; your weekly goal is # minutes.
+به هدف هفتگی‌ات رسیده‌ای.=You have reached your weekly goal.
+در # روز گذشته # روز مطالعه کرده‌ای؛ مطالعه‌ی هم‌زمان‌تر، روتین را منظم‌تر می‌کند.=In the last # days you studied on # days; steadier study makes your routine more regular.
+میانگین جلسه‌هایت بلند است؛ استراحت‌های منظم را در نظر بگیر.=Your sessions are long on average; consider regular breaks.
+عنوان کار=Task title
+توضیحات (اختیاری)=Description (optional)
+تاریخ=Date
+پایان=End
+اولویت=Priority
+دسته=Category
+افزودن کار=Add task
+ذخیره‌ی تغییرات=Save changes
+هفته=Week
+همه=All
+تقویم=Calendar
+قبلی=Previous
+بعدی=Next
+# از # کار انجام شده=# of # tasks done
+کاری برای این بازه نیست. اولین کارت را اضافه کن.=No tasks in this range. Add your first one.
+درس=Study
+تمرین=Practice
+مرور=Review
+آزمون=Exam
+شخصی=Personal
+کم=Low
+زیاد=High
+اولویت کم=Low priority
+اولویت متوسط=Medium priority
+اولویت زیاد=High priority
+عقب‌افتاده=Overdue
+عنوان کار را بنویس=Write a task title
+تاریخ را انتخاب کن=Choose a date
+ساعت پایان باید بعد از شروع باشد=End time must be after start time
+# کار عقب‌افتاده داری=You have # overdue tasks
+تنظیمات=Settings
+ذخیره‌ی پروفایل=Save profile
+پروفایل ذخیره شد=Profile saved
+حالت نمایش=Display mode
+روشن=Light
+تاریک=Dark
+پوسته=Theme
+فونت=Font
+هدف روزانه (دقیقه)=Daily goal (minutes)
+یادآوری کارهای عقب‌افتاده=Overdue task reminders
+یادآوری قبل از شروع کار=Reminder before a task starts
+زبان / Language=Language
+اندازه‌ی متن=Text size
+پاک‌کردن همه‌ی داده‌ها=Erase all data
+مطمئنی؟ دوباره بزن=Sure? Tap again
+یادداشت جدید=New note
+جستجو=Search
+ذخیره=Save
+عنوان=Title
+تاریخ و ساعت=Date and time
+متن یادداشت=Note text
+قلم=Pen
+پاک‌کن=Eraser
+پاک‌کردن بوم=Clear canvas
+عکس از گالری=Photo from gallery
+بازگشت به یادداشت‌ها=Back to notes
+یادداشتی پیدا نشد.=No notes found.
+بدون عنوان=Untitled
+ذخیره شد=Saved
+برای حذف، دوباره بزن=Tap again to delete
+ریاضی و فیزیک=Mathematics & Physics
+علوم تجربی=Experimental Sciences
+ادبیات و علوم انسانی=Literature & Humanities
+علوم و معارف اسلامی=Islamic Sciences & Studies
+فنی‌وحرفه‌ای و کاردانش=Technical, Vocational & Skills
+شروع کاربرگ=Start worksheet
+بازگشت به رشته‌ها=Back to fields
+نتیجه‌ی کاربرگ=Worksheet result
+دوباره=Again
+آزمایشگاه مجازی=Virtual Lab
+بازگشت به آزمایشگاه=Back to lab
+اسیدی و بازی=Acids & Bases
+چگالی مایعات=Liquid Density
+مدار الکتریکی=Electric Circuit
+سلول و میکروسکوپ=Cell & Microscope
+حرکت پرتابی=Projectile Motion
+آونگ ساده=Simple Pendulum
+تیتراسیون مجازی=Virtual Titration
+ضربان قلب و ورزش=Heart Rate & Exercise
+شیمی=Chemistry
+فیزیک=Physics
+زیست=Biology
+مناسب پایه‌ی تو=Suits your grade
+مناسب پایه‌ی بالاتر=For a higher grade
+رنگ نشانگر جهانی را با افزودن مواد ببین=See the universal indicator color as you add substances
+مایعات را لایه‌لایه کن و اجسام را بینداز=Layer the liquids and drop in objects
+لامپ‌ها را سری یا موازی ببند=Connect the bulbs in series or parallel
+با بزرگ‌نمایی اجزای سلول را پیدا کن=Zoom in to find the parts of the cell
+زاویه و سرعت پرتاب را تغییر بده=Change the launch angle and speed
+اثر طول، گرانش و جرم را ببین=See the effect of length, gravity and mass
+نقطه‌ی پایان را با نشانگر رنگی پیدا کن=Find the end point with a color indicator
+ببین بدن هنگام فعالیت چه می‌کند=See what the body does during activity
+پرتاب=Launch
+پاک‌کردن مسیرها=Clear paths
+رها کن / توقف=Release / Stop
+زمین=Earth
+ماه=Moon
+مریخ=Mars
+زمین (#)=Earth (#)
+ماه (#)=Moon (#)
+مریخ (#)=Mars (#)
+گرانش=Gravity
+زاویه:=Angle:
+سرعت اولیه:=Initial speed:
+طول نخ:=String length:
+جرم وزنه:=Bob mass:
+زاویه‌ی شروع:=Start angle:
+شروع دوباره=Start over
+استراحت=Rest
+راه‌رفتن=Walking
+دویدن آرام=Light jogging
+دویدن سریع=Fast running
+ضربان قلب:=Heart rate:
+بار در دقیقه · تنفس:=beats/min · Breathing:
+بار در دقیقه=breaths/min
+حجم باز:=Base volume:
+بشر پر شد=Beaker is full
+آزمون کوتاه=Short quiz
+آزمون کوتاه · سؤال #=Short quiz · Question #
+نتیجه=Result
+مرکز بازی=Game Center
+مار=Snake
+دوز=Tic-Tac-Toe
+چالش ریاضی=Math Challenge
+بازگشت=Back
+بازگشت به اتاق مطالعه=Back to Study Room
+باختی!=You lost!
+`.split('\n').forEach(l=>{const i=l.indexOf('=');if(i>0)D[nz(l.slice(0,i).trim())]=l.slice(i+1).trim()});
+const RX=[[/^(صبح بخیر|عصر بخیر|شب بخیر)، (.+)$/,(m,a,b)=>({'صبح بخیر':'Good morning','عصر بخیر':'Good afternoon','شب بخیر':'Good evening'}[a])+', '+b],[/^آفرین (.+)!$/,(m,a)=>'Well done, '+a+'!'],[/^پایهی (\S+) · سطح (.+)$/,(m,a,b)=>'Grade '+(D[nz(a)]||a)+' · Level '+(D[nz(b)]||b)],[/^(شیمی|فیزیک|زیست) · (.+)$/,(m,a,b)=>D[a]+' · '+(D[nz(b)]||b)],[/^«(.+)» ([۰-۹0-9]+) دقیقهی دیگر شروع میشود$/,(m,a,b)=>'«'+a+'» starts in '+b+' min']];
+function trs_old(v){if(!/[\u0600-\u06FF]/.test(v))return v;const lead=v.match(/^\s*/)[0],tail=v.match(/\s*$/)[0],core=nz(v).trim(),nums=[],key=core.replace(/[۰-۹0-9]+(?:[.٫][۰-۹0-9]+)?/g,m=>{nums.push(m.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace('٫','.'));return'#'}),r=D[key];if(r===undefined){for(const[re,f]of RX){const m=core.match(re);if(m)return lead+f(...m)+tail}return v}let i=0;return lead+r.replace(/#/g,()=>nums[i++]??'#')+tail}
+function trn(n){if(n.nodeType==3){const v=trs(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v}else if(n.nodeType==1){if(n.tagName=='SCRIPT'||n.tagName=='STYLE')return;['placeholder','title'].forEach(a=>{if(n.hasAttribute(a)){const v=trs(n.getAttribute(a));if(v!==n.getAttribute(a))n.setAttribute(a,v)}});n.childNodes.forEach(trn)}}
+new MutationObserver(ms=>{if(!EN()&&!AR())return;ms.forEach(m=>{if(m.type=='characterData')trn(m.target);else m.addedNodes.forEach(trn)})}).observe(document.body,{childList:true,subtree:true,characterData:true});
+if(EN()||AR())trn(document.body);
+/* arabic */
+function AR(){return !!(S&&S.set&&S.set.lang=='ar')}
+function LC(){return EN()?'en-US':AR()?'ar-EG':'fa-IR'}
+const DAE={};`
+Hamzi=همزي
+Hamzi: your smart learning companion=همزي: رفيقك الذكي في رحلة التعلّم
+Welcome! Ready to learn?=مرحباً! هل أنت مستعد للتعلّم؟
+Built by Hassan Mohammadi=صنع حسن محمدي
+Dashboard=لوحة التحكم
+Student registration=تسجيل الطالب
+First name=الاسم الأول
+Last name=اسم العائلة
+School grade=الصف الدراسي
+Academic level=المستوى الدراسي
+Daily study goal (minutes)=هدف الدراسة اليومي (بالدقائق)
+Profile picture=الصورة الشخصية
+Start learning=ابدأ التعلّم
+Upload a photo from gallery=ارفع صورة من المعرض
+Drag the photo to move it and use the slider to zoom.=اسحب الصورة لتحريكها واستخدم الشريط للتقريب والتبعيد.
+Confirm photo=تأكيد الصورة
+Photo selected=تم اختيار الصورة
+1st=الأول
+2nd=الثاني
+3rd=الثالث
+4th=الرابع
+5th=الخامس
+6th=السادس
+7th=السابع
+8th=الثامن
+9th=التاسع
+10th=العاشر
+11th=الحادي عشر
+12th=الثاني عشر
+Needs improvement=يحتاج إلى تحسين
+Medium=متوسط
+Good=جيد
+Excellent=ممتاز
+Enter first and last name (at least # letters)=أدخل الاسم الأول واسم العائلة (# أحرف على الأقل)
+Enter a study goal between # and # minutes=أدخل هدف دراسة بين # و# دقيقة
+Today's goal: # minutes of study=هدف اليوم: # دقيقة من الدراسة
+Every short session brings you one step closer to your goal.=كل جلسة قصيرة تقرّبك خطوة من هدفك.
+Consistency matters more than intensity; study a little today too.=الاستمرارية أهم من الكثافة؛ ادرس قليلاً اليوم أيضًا.
+Rest a little after each session to refocus.=استرح قليلاً بعد كل جلسة لتستعيد تركيزك.
+Study Room=غرفة الدراسة
+Timer and focus sessions=المؤقّت وجلسات التركيز
+Study Analytics=تحليلات الدراسة
+Stats and suggestions=الإحصاءات والاقتراحات
+Lab=المختبر
+Safe virtual experiments=تجارب افتراضية آمنة
+Career Guidance=التوجيه الدراسي
+Fields overview and fit worksheet=التعريف بالتخصصات وورقة قياس الميول
+Notes=الملاحظات
+Write, draw and add photos=اكتب وارسم وأضف صورًا
+Planner=المخطّط
+Tasks, times and priorities=المهام والأوقات والأولويات
+Message of the day=رسالة اليوم
+Start=ابدأ
+Pause=إيقاف
+Resume=متابعة
+Reset=إعادة ضبط
+Seconds=ثوانٍ
+Minutes=دقائق
+Hours=ساعات
+No sound=بدون صوت
+Rain=مطر
+White noise=ضوضاء بيضاء
+Brown noise=ضوضاء بنية
+Focus mode=وضع التركيز
+Exit focus mode=الخروج من وضع التركيز
+Pomodoro (# min focus + # min break)=بومودورو (# دقيقة تركيز + # دقائق استراحة)
+# minute break=استراحة # دقيقة
+Break is over=انتهت الاستراحة
+Start next focus round=ابدأ جولة التركيز التالية
+A short game for a break? Play time is limited.=لعبة قصيرة للاستراحة؟ وقت اللعب محدود.
+Short games=ألعاب قصيرة
+# minutes of study logged.=تم تسجيل # دقيقة من الدراسة.
+Study session finished=انتهت جلسة الدراسة
+Enter a duration between # second and # hours=أدخل مدة بين # ثانية و# ساعة
+Finish or reset the current session first=أنهِ الجلسة الحالية أو أعد ضبطها أولاً
+Sound playback isn't available in this browser=تشغيل الصوت غير متاح في هذا المتصفح
+Total study=إجمالي الدراسة
+Sessions=الجلسات
+Avg. session=متوسط الجلسة
+Streak (days)=الأيام المتتالية
+This week=هذا الأسبوع
+Last # days=آخر # يومًا
+Today=اليوم
+# -day consistency=الانتظام خلال # يومًا
+# min=# د
+#%=#٪
+Last # days (minutes)=آخر # أيام (بالدقائق)
+# -day activity map=خريطة النشاط لـ # يومًا
+Suggestions=الاقتراحات
+No sessions logged yet. Start with a short session so suggestions are built from your own data.=لم تُسجَّل أي جلسة بعد. ابدأ بجلسة قصيرة لتُبنى الاقتراحات من بياناتك أنت.
+You studied more this week than last week.=درست هذا الأسبوع أكثر من الأسبوع الماضي.
+You studied less this week than last week.=درست هذا الأسبوع أقل من الأسبوع الماضي.
+You studied # minutes this week; your weekly goal is # minutes.=درست # دقيقة هذا الأسبوع؛ وهدفك الأسبوعي # دقيقة.
+You have reached your weekly goal.=لقد حققت هدفك الأسبوعي.
+In the last # days you studied on # days; steadier study makes your routine more regular.=خلال آخر # يومًا درست في # أيام؛ الدراسة المنتظمة تجعل روتينك أكثر ثباتًا.
+Your sessions are long on average; consider regular breaks.=جلساتك طويلة في المتوسط؛ فكّر في أخذ استراحات منتظمة.
+Task title=عنوان المهمة
+Description (optional)=الوصف (اختياري)
+Date=التاريخ
+End=النهاية
+Priority=الأولوية
+Category=الفئة
+Add task=إضافة مهمة
+Save changes=حفظ التغييرات
+Week=الأسبوع
+All=الكل
+Calendar=التقويم
+Previous=السابق
+Next=التالي
+# of # tasks done=تم إنجاز # من # مهمة
+No tasks in this range. Add your first one.=لا توجد مهام في هذه الفترة. أضف أول مهمة.
+Study=دراسة
+Practice=تمرين
+Review=مراجعة
+Exam=اختبار
+Personal=شخصي
+Low=منخفضة
+High=عالية
+Low priority=أولوية منخفضة
+Medium priority=أولوية متوسطة
+High priority=أولوية عالية
+Overdue=متأخرة
+Write a task title=اكتب عنوان المهمة
+Choose a date=اختر التاريخ
+End time must be after start time=يجب أن يكون وقت الانتهاء بعد وقت البدء
+You have # overdue tasks=لديك # مهام متأخرة
+Settings=الإعدادات
+Save profile=حفظ الملف الشخصي
+Profile saved=تم حفظ الملف الشخصي
+Display mode=وضع العرض
+Light=فاتح
+Dark=داكن
+Theme=السمة
+Font=الخط
+Daily goal (minutes)=الهدف اليومي (بالدقائق)
+Overdue task reminders=تذكير بالمهام المتأخرة
+Reminder before a task starts=تذكير قبل بدء المهمة
+Language=اللغة
+Text size=حجم النص
+Erase all data=مسح جميع البيانات
+Sure? Tap again=متأكد؟ اضغط مرة أخرى
+New note=ملاحظة جديدة
+Search=بحث
+Save=حفظ
+Title=العنوان
+Date and time=التاريخ والوقت
+Note text=نص الملاحظة
+Pen=قلم
+Eraser=ممحاة
+Clear canvas=مسح اللوحة
+Photo from gallery=صورة من المعرض
+Back to notes=العودة إلى الملاحظات
+No notes found.=لا توجد ملاحظات.
+Untitled=بدون عنوان
+Saved=تم الحفظ
+Tap again to delete=اضغط مرة أخرى للحذف
+Mathematics & Physics=الرياضيات والفيزياء
+Experimental Sciences=العلوم التجريبية
+Literature & Humanities=الآداب والعلوم الإنسانية
+Islamic Sciences & Studies=العلوم والمعارف الإسلامية
+Technical, Vocational & Skills=التعليم التقني والمهني
+Start worksheet=ابدأ ورقة العمل
+Back to fields=العودة إلى التخصصات
+Worksheet result=نتيجة ورقة العمل
+Again=مرة أخرى
+Virtual Lab=المختبر الافتراضي
+Back to lab=العودة إلى المختبر
+Acids & Bases=الأحماض والقواعد
+Liquid Density=كثافة السوائل
+Electric Circuit=الدائرة الكهربائية
+Cell & Microscope=الخلية والمجهر
+Projectile Motion=حركة المقذوفات
+Simple Pendulum=البندول البسيط
+Virtual Titration=المعايرة الافتراضية
+Heart Rate & Exercise=نبض القلب والرياضة
+Chemistry=كيمياء
+Physics=فيزياء
+Biology=أحياء
+Suits your grade=مناسب لصفّك
+For a higher grade=لصفّ أعلى
+See the universal indicator color as you add substances=شاهد لون الكاشف العام أثناء إضافة المواد
+Layer the liquids and drop in objects=رتّب السوائل في طبقات وأسقط الأجسام
+Connect the bulbs in series or parallel=صِل المصابيح على التوالي أو التوازي
+Zoom in to find the parts of the cell=قرّب لتجد أجزاء الخلية
+Change the launch angle and speed=غيّر زاوية القذف وسرعته
+See the effect of length, gravity and mass=شاهد أثر الطول والجاذبية والكتلة
+Find the end point with a color indicator=جد نقطة النهاية بكاشف لوني
+See what the body does during activity=شاهد ماذا يفعل الجسم أثناء النشاط
+Launch=إطلاق
+Clear paths=مسح المسارات
+Release / Stop=أطلِق / أوقف
+Earth=الأرض
+Moon=القمر
+Mars=المريخ
+Earth (#)=الأرض (#)
+Moon (#)=القمر (#)
+Mars (#)=المريخ (#)
+Gravity=الجاذبية
+Angle:=الزاوية:
+Initial speed:=السرعة الابتدائية:
+String length:=طول الخيط:
+Bob mass:=كتلة الثقل:
+Start angle:=زاوية البداية:
+Start over=ابدأ من جديد
+Rest=راحة
+Walking=مشي
+Light jogging=ركض خفيف
+Fast running=جري سريع
+Heart rate:=نبض القلب:
+beats/min · Breathing:=نبضة/دقيقة · التنفس:
+breaths/min=نفس/دقيقة
+Base volume:=حجم القاعدة:
+Beaker is full=الكأس ممتلئة
+Short quiz=اختبار قصير
+Short quiz · Question #=اختبار قصير · السؤال #
+Result=النتيجة
+Game Center=مركز الألعاب
+Snake=الثعبان
+Tic-Tac-Toe=إكس أو
+Math Challenge=تحدّي الرياضيات
+Back=رجوع
+Back to Study Room=العودة إلى غرفة الدراسة
+You lost!=لقد خسرت!
+`.split('\n').forEach(l=>{const i=l.indexOf('=');if(i>0)DAE[l.slice(0,i).trim()]=l.slice(i+1).trim()});
+const RXA=[[/^(صبح بخیر|عصر بخیر|شب بخیر)، (.+)$/,(m,a,b)=>({'صبح بخیر':'صباح الخير','عصر بخیر':'طاب مساؤك','شب بخیر':'مساء الخير'}[a])+'، '+b],[/^آفرین (.+)!$/,(m,a)=>'أحسنت يا '+a+'!'],[/^پایهی (\S+) · سطح (.+)$/,(m,a,b)=>'الصف '+(DAE[D[nz(a)]]||a)+' · المستوى '+(DAE[D[nz(b)]]||b)],[/^(شیمی|فیزیک|زیست) · (.+)$/,(m,a,b)=>DAE[D[a]]+' · '+(DAE[D[nz(b)]]||b)],[/^«(.+)» ([٠-٩۰-۹0-9]+) دقیقهی دیگر شروع میشود$/,(m,a,b)=>'«'+a+'» يبدأ بعد '+b+' دقيقة']];
+const DQE=[['And say: My Lord, increase me in knowledge.','Quran, Surah Ta-Ha, verse 114'],['Are those who know equal to those who do not know?','Quran, Surah Az-Zumar, verse 9'],['Allah will raise those who believe among you, and those who were given knowledge, by degrees.','Quran, Surah Al-Mujadila, verse 11'],['Read in the name of your Lord who created.','Quran, Surah Al-Alaq, verse 1'],['Seeking knowledge is an obligation on every Muslim.','Prophetic hadith, narrated in al-Kafi'],['Knowledge is better than wealth: knowledge guards you, while you must guard wealth.','Imam Ali (a), Nahj al-Balagha, Wisdom 147'],['The worth of every person is what they do well.','Imam Ali (a), Nahj al-Balagha, Wisdom 81']];
+const DQA=['القرآن الكريم، سورة طه، الآية ١١٤','القرآن الكريم، سورة الزمر، الآية ٩','القرآن الكريم، سورة المجادلة، الآية ١١','القرآن الكريم، سورة العلق، الآية ١','حديث نبوي، نُقل في الكافي','الإمام علي (ع)، نهج البلاغة، الحكمة ١٤٧','الإمام علي (ع)، نهج البلاغة، الحكمة ٨١'];
+function trs(v){if(!/[\u0600-\u06FF]/.test(v))return v;const lead=v.match(/^\s*/)[0],tail=v.match(/\s*$/)[0],core=nz(v).trim(),nums=[],key=core.replace(/[٠-٩۰-۹0-9]+(?:[.٫][٠-٩۰-۹0-9]+)?/g,m=>{nums.push(m.replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace('٫','.'));return'#'});let r=D[key];if(r!==undefined&&AR())r=DAE[r]??r;if(r===undefined){for(const[re,f]of(AR()?RXA:RX)){const m=core.match(re);if(m)return lead+f(...m)+tail}return v}let i=0,o=r.replace(/#/g,()=>nums[i++]??'#');if(AR())o=o.replace(/[0-9]/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);return lead+o+tail}
+/* boot */
+(function(){apply();const t0=Date.now(),iv=setInterval(()=>{const p=Math.min(100,(Date.now()-t0)/16);$('#pb').style.width=p+'%';if(p>=100){clearInterval(iv);$('#sp').style.opacity=0;setTimeout(()=>{$('#sp').remove();render();chk()},450)}},40)})();
+</script></body></html>
